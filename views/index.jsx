@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/default')
 
-function Index ({ movies, trendingMovies }) {
+function Index ({ }) {
 
     return (
         <html>
