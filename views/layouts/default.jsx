@@ -12,7 +12,7 @@ function Default(html) {
     <body>
       <div className="wrapper">
         <header className='banner'>
-          <h1><a href="/movies" className='black'>Time Capsules</a></h1>
+          <h1><a href="/capsules" className='black'>Time Capsules</a></h1>
         </header>
    
         <nav className=" navbar-expand-lg navbar-light">
@@ -20,6 +20,8 @@ function Default(html) {
         <a className="nav-linkJ active" aria-current="page" href="/capsules">Home</a>
         <a className="nav-linkJ" href="/capsules/new">New Capsule</a>
         <a className="nav-linkJ" href="/capsules">Your Capsules</a>
+        <a className="nav-linkJ" href="/users">Login</a>
+        <a className="nav-linkJ" href="/users/signup">Sign Up</a>
 </div>
 </nav>
         <div className="container">

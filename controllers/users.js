@@ -1,24 +1,21 @@
-const router = require('express').Router()
+const users = require('express').Router()
 const User = require("../models/user")
 const userSeedData = require("../models/userSeedData.js")
 
-router.get("/data/seed", async (req, res) => {
+users.get("/data/seed", async (req, res) => {
     await User.insertMany(userSeedData)
     res.redirect('/')
 })
 
-router.post('/', async (req, res) => {
-    const user = await User.create(req.body)
-    res.json(user)
+//Home Route for login
+users.get('/', (req, res) => {
+    res.render('loginForm')
 })
 
-router.get('/', async (req, res) => {
-    const users = await User.findAll()
-    res.json(users)
+//Sign Up Form
+users.get('/signup', (req, res) => {
+    res.render('signupForm')
 })
 
-router.get('/login', (req, res) => {
-    res.render("login")
-})
+module.exports = users
 
-module.exports = router
