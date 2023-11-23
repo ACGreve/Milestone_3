@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npx nodemon server.js -e .js,.jsx",
     "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +14,8 @@
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.0.1",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
     "pg": "^8.11.3",
