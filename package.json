@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npx nodemon server.js -e .js,.jsx",
     "start": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

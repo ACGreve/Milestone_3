@@ -1,27 +1,20 @@
-const router = require('express').Router()
-const db = require("../models")
-
-const { Capsule, User } = db
-
-router.post('/', async (req, res) => {
-
-})
-
-router.get('/', async (req, res) => {
-
-})
+const capsules = require('express').Router()
+const Capsule = require('../models/capsule')
+const capsuleSeedData = require('../models/capsuleSeedData')
 
 
-router.get('/:capsuleId', async (req, res) => {
+//Seed data route
+capsules.get('/data/seed', async (req, res)=>{
+  await Promise.all([Capsule.deleteMany()])
+   const capsules = await Capsule.insertMany(capsuleSeedData)
+  const capsuleIds = capsules.map(capsule => capsule._id)
+  res.redirect('/capsules')
 
 })
 
-router.put('/:capsuleId', async (req, res) => {
-
+//Home Route for all the movies
+capsules.get('/', async(req, res)=>{//this route works fine
+  res.render('index')
 })
 
-router.delete('/:capsuleId', async (req, res) => {
-
-})
-
-module.exports = router
+module.exports = capsules

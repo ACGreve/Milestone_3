@@ -12,11 +12,11 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
-app.engine('jsx', require('express-react-views').createEngine())
+//app.engine('jsx', require('express-react-views').createEngine())
 
 // Controllers & Routes
 app.use('/capsules', require('./controllers/capsules'))
-app.use('/users', require('./controllers/users'))
+//app.use('/users', require('./controllers/users'))
 
 // db connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true})
