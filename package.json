@@ -14,12 +14,14 @@
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-react-views": "^0.11.0",
     "method-override": "^3.0.0",
     "mongoose": "^8.0.1",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
     "pg": "^8.11.3",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sequelize": "^6.35.1",
     "sequelize-cli": "^6.6.2"
   }
