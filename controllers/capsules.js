@@ -12,7 +12,12 @@ capsules.get('/data/seed', async (req, res)=>{
 
 //Home Route for all the capsules
 capsules.get('/', async(req, res)=>{//this route works fine
-  res.render('index')
+  res.render('capsules/index')
+})
+
+//get new page
+capsules.get("/new", (req, res) => {
+  res.render("capsules/newCapsule")
 })
 
 module.exports = capsules
