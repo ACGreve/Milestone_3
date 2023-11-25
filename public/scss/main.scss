@@ -1,0 +1,560 @@
+@import "config";
+@import "mixins";
+@import "functions";
+
+/* globals */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-stack;
+  text-align: center;
+  font-weight: bold;
+  color: $baby-blue;
+  text-shadow: 0 0 0.2rem $white;
+  background-color: $black;
+
+  h1 {
+    text-align: center;
+    color: $baby-blue;
+    -webkit-text-stroke: 1px $white;
+  }
+
+  h2 {
+    color: $baby-blue !important;
+  }
+
+  h3,
+  h4 {
+    font-family: $font-stack;
+    font-size: 0.7em;
+  }
+
+  p {
+    font-family: $font-stack;
+    color: $baby-blue;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    font-size: 0.7em !important;
+    line-height: 1em;
+    text-shadow: 0 0 0.3rem $black;
+  }
+
+  img {
+    margin: auto;
+    width: 75%;
+    vertical-align: top !important;
+  }
+}
+
+/* home view */
+body.home {
+  @include overflow-hidden-views($home-background);
+  display: flex;
+  flex-direction: column;
+  font-family: $font-stack;
+  text-align: center;
+  font-weight: bold;
+  color: $baby-blue;
+  text-shadow: 0 0 0.1rem $baby-blue;
+  background-color: $black;
+
+  h1 {
+    color: $yale-blue;
+    -webkit-text-stroke: 1px $white;
+    margin-top: 0.5em;
+  }
+
+  h2 {
+    color: $yale-blue !important;
+    text-shadow: 0 0 0.3rem $black;
+    -webkit-text-stroke: 1px $white;
+  }
+}
+
+/* capsules view */
+body.capsules {
+  @include scrolling-background-properties($capsules-background);
+
+  h1 {
+    color: $baby-blue;
+    text-shadow: 0 0 0.3rem $black;
+    -webkit-text-stroke: 1px $white;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    color: $baby-blue !important;
+    text-shadow: 0 0 0.3rem $black;
+  }
+
+  p {
+    font-size: 0.8em !important;
+    color: $baby-blue !important;
+    text-shadow: 0 0 0.3rem $black;
+  }
+
+  a img {
+    padding-bottom: 7px;
+    @include transition();
+  }
+
+  a:hover img {
+    transform: scale(1.025);
+    transition: 0.2s ease-in-out !important;
+  }
+
+  .col-sm-6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center !important;
+  }
+
+  .col-sm-6 img,
+  .col-md-6 img,
+  .col-lg-4 img,
+  .col-xl-3 img,
+  .col-xxl-2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .show-row {
+    background-color: $gallery-screen;
+  }
+
+  .row {
+    @include centered-row;
+  }
+}
+
+/* show view */
+body.show {
+  @include scrolling-background-properties($show-background);
+
+  h1 {
+    color: $baby-blue;
+    -webkit-text-stroke: 1px $white;
+  }
+
+  p {
+    font-size: 0.7em !important;
+    color: $baby-blue !important;
+    text-shadow: 0 0 0.3rem $black;
+  }
+
+  .img-fluid {
+    margin: auto;
+    width: 100%;
+  }
+
+  .col-md-4 img {
+    height: set-height(70) !important;
+    object-fit: contain;
+  }
+
+  .col-md-8 {
+    margin: 0 auto;
+    padding: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .row {
+    @include centered-row;
+  }
+
+  /* different viewport size adjustments */
+  @media (min-width: 1401px) {
+    h1 {
+      font-size: 3.5em !important;
+    }
+  
+    h2 {
+      font-size: 1.1em !important;
+    }
+  
+    p {
+      font-size: 1.5em !important;
+    }
+  
+    img {
+      height: set-height(80) !important;
+    }
+
+    .show-row {
+      text-align: center;
+      margin-left: 10em;
+      margin-right: 10em;
+    }
+  }
+
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 3em !important;
+    }
+  
+    h2 {
+      font-size: 1.1em !important;
+    }
+  
+    p {
+      font-size: 1.2em !important;
+    }
+  
+    .show-row {
+      text-align: center;
+      margin-left: 9em;
+      margin-right: 9em;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2.67em !important;
+    }
+  
+    h2 {
+      font-size: 1.1em !important;
+    }
+  
+    p {
+      font-size: 1em !important;
+    }
+  
+    img {
+      height: set-height(70) !important;
+      width: 100%;
+      object-fit: contain;
+    }
+  
+    .col-md-4,
+    .col-md-8 {
+      width: 50%;
+    }
+
+    .show-row {
+      text-align: center;
+      margin-left: 8em;
+      margin-right: 8em;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .col-md-4 img {
+      height: set-height(60) !important;
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 2em !important;
+    }
+  
+    h2 {
+      font-size: 1.1em !important;
+    }
+  
+    p {
+      font-size: 0.8em !important;
+    }
+  
+    .col-md-4 img {
+      height: set-height(50) !important;
+      object-fit: contain;
+    }
+
+    .show-row {
+      text-align: center;
+      margin-left: 5em;
+      margin-right: 5em;
+    }
+  }
+
+  @media (max-width: 567px) {
+    h1 {
+      font-size: 2em !important;
+    }
+  
+    h2 {
+      font-size: 1.1em !important;
+    }
+  
+    p {
+      font-size: 0.8em !important;
+    }
+  
+    .show-row {
+      text-align: center;
+      margin-left: 4em;
+      margin-right: 4em;
+    }
+  }
+}
+
+/* new and edit views */
+body {
+  &.edit {
+    @include overflow-hidden-views($edit-background);
+  }
+
+  &.new {
+    @include overflow-hidden-views($new-background);
+  }
+
+  &.new label,
+  &.edit label {
+    font-size: 1em !important;
+    color: $baby-blue !important;
+    text-shadow: 0 0 0.3rem $black;
+  }
+}
+
+/* forms on both new and edit */
+form {
+  @if type-of($form-width) != number {
+    @error "Invalid value for form-width: '#{$form-width}'. Expected a number.";
+  } @else if $form-width > 800px {
+    max-width: 800px !important;
+  } @else {
+    max-width: $form-width !important;
+  }
+  margin: 0 auto; 
+
+  .form-control {
+    font-family: $font-stack;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: $form-border;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+      border-color: $focus-border;
+      box-shadow: $focus-box-shadow;
+    }
+  }
+}
+
+/* error404 view */
+body.error404 {
+  @include overflow-hidden-views($error-404);
+
+  h1 {
+    color: $baby-blue;
+    -webkit-text-stroke: 1px $white;
+    font-size: 2.5em !important;
+    margin-top: -0.9em;
+
+    @media (max-width: 768px) {
+      font-size: 1.5em !important;
+    }
+  }
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  font-family: $font-stack;
+  font-size: 1.1em;
+  font-style: italic;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 4em !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+
+  .navbar-nav {
+    margin-left: 1.2em;
+    margin-right: auto;
+  }
+
+  .nav-link {
+    color: $baby-blue !important;
+    font-size: 1.2em !important;
+    @include transition();
+
+    &:hover {
+      color: $baby-blue !important;
+      text-decoration: none;
+      @include transition();
+    }
+  }
+
+  .navbar-brand {
+    &:hover {
+      color: $baby-blue !important;
+      text-decoration: none;
+      @include transition();
+    }
+  }
+}
+
+/* buttons on home, new, and edit */
+.btn-primary {
+  background-color: $drab-dark-brown !important;
+  color: $baby-blue !important;
+  padding: 0rem 2.2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid $baby-blue !important;
+  cursor: pointer;
+  font-size: 1.9rem;
+  box-shadow: $box-shadow;
+  @include transition();
+  padding-bottom: 4px;
+
+  &:hover {
+    @include scale-transform();
+    background-color: $drab-dark-brown !important;
+    color: $baby-blue !important;
+    text-shadow: 0 0 0.25em $baby-blue !important;
+    @include transition();
+  }
+
+  &:active {
+    background-color: $baby-blue !important;
+    color: $drab-dark-brown !important;
+    @include transition();
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2em !important;
+    border-radius: 0.4em;
+  }
+}
+
+/* edit (btn-warning) and delete (btn-danger) buttons */
+.edits {
+  margin-top: 0.3em;
+  margin-bottom: 4em;
+}
+
+.btn-warning,
+.btn-danger {
+  border-radius: 0.5em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  font-size: 1em;
+  border: 1px solid $black !important;
+
+  &:active {
+    background-color: $baby-blue !important;
+    @include transition();
+  }
+}
+
+.btn-danger {
+  color: $baby-blue !important;
+
+  &:hover {
+    @include scale-transform();
+    @include transition();
+    border: 1px solid $baby-blue !important;
+    color: $black !important;
+  }
+}
+
+.btn-warning {
+  color: $black !important;
+
+  &:hover {
+    @include scale-transform();
+    @include transition();
+    border: 1px solid $baby-blue !important;
+    color: $baby-blue !important;
+    background-color: $warning !important;
+  }
+}
+
+/* links */
+a {
+  &:link,
+  &:visited {
+    color: $baby-blue;
+    font-size: 1em;
+    @include transition-color();
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $baby-blue;
+    font-size: 1em;
+    text-decoration: none;
+    @include transition-color();
+    text-shadow: 0 0 0.9em $baby-blue !important;
+  }
+
+  &:active {
+    color: $active-link;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+.sticky-footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+  width: 100%;
+  height: 5em;
+  line-height: 1em !important;
+  background: linear-gradient(
+    to top,
+    $footer-color,
+    $footer-color 90%,
+    rgba($footer-color, 0)
+  );
+  color: $baby-blue !important;
+  font-family: $font-stack;
+
+  a {
+    color: $baby-blue !important;
+    text-decoration: none;
+    padding-bottom: 2px;
+    @include transition();
+    margin-bottom: 0;
+
+    &:hover {
+      color: $baby-blue !important;
+      text-shadow: 0 0 0.9em $baby-blue !important;
+      text-decoration: none;
+      @include transition();
+    }
+  }
+
+  .icons {
+    color: $baby-blue !important;
+  }
+
+  .copyright {
+    color: $baby-blue !important;
+    font-family: $font-stack;
+    padding-top: 11px;
+    font-size: 0.8rem !important;
+
+    @media (max-width: 768px) {
+      font-size: 0.56rem !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Adjust font size of footer text for smaller screens */
+    .my-info {
+      font-size: 0.7rem;
+    }
+  }
+}
