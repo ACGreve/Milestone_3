@@ -3,11 +3,11 @@ const Def = require("../default")
 
 function new_form() {
   return (
-    <Def title="Add a New Movie">
+    <Def title="Add a New Capsule">
       <body className="new">
         <main>
           <h1>Add a New Capsule</h1>
-          <form method="POST" action="/movies">
+          <form method="POST" action="/capsules">
             <div className="form-group">
               <label htmlFor="title">Capsule title</label>
               <input
