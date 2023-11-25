@@ -1,12 +1,18 @@
+const React = require("react")
+const Default = require("./default")
 
 function Error404() {
-    return (
-        <main>
-            <h1>404: PAGE NOT FOUND</h1>
-            <p>Oops, sorry, we can't find this page!</p>
-            <img src={ process.env.REACT_APP_SERVER_URL + "images/kittykat.jpeg" } alt="cute cat pic" />
-        </main>
-    );
+  return (
+    <Default title="No capsules here...">
+      <body className="error404">
+        <h1>Oops, sorry, we can't find this page!</h1>
+        <br />
+        <a href="/capsules">
+          <button className="btn btn-primary">Back to the Time Capsules</button>
+        </a>
+      </body>
+    </Default>
+  )
 }
 
-export default Error404;
+module.exports = Error404
