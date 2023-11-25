@@ -9,11 +9,11 @@ function new_form() {
           <h1>Add a New Capsule</h1>
           <form method="POST" action="/capsules">
             <div className="form-group">
-              <label htmlFor="title">Capsule title</label>
+              <label htmlFor="name">Capsule Name</label>
               <input
                 className="form-control"
-                id="title"
-                name="title"
+                id="name"
+                name="name"
                 required
               />
             </div>

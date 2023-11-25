@@ -6,14 +6,14 @@ function index(data) {
   let capsulesFormatted = data.capsules.map((capsule) => {
     return (
       <div
-        key={capsule.title}
+        key={capsule.name}
         className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-2"
       >
         <a href={`/capsules/${capsule.id}`}>
           <img src={capsule.image} alt='Image not available' />
         </a>
         <h2>
-          <a href={`/capsules/${capsule.id}`}>{capsule.title}</a>
+          <a href={`/capsules/${capsule.id}`}>{capsule.name}</a>
         </h2>
       </div>
     )

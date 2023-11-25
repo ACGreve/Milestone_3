@@ -3,19 +3,19 @@ const Default = require("../default")
 
 function show(data) {
   return (
-    <Default title={data.capsule.title}>
+    <Default title={data.capsule.name}>
       <body className="show">
         <main>
           <div className="row flex-column flex-md-row">
             <div className="col-md-4 p">
               <img
                 src={data.capsule.image}
-                alt={data.capsule.title}
+                alt={data.capsule.name}
                 className="img-fluid"
               />
             </div>
             <div className="col-md-8">
-              <h1>{data.capsule.title}</h1>
+              <h1>{data.capsule.name}</h1>
               <br />
               <p>Date: {data.capsule.date}</p>
               <p>Place: {data.capsule.place}</p>
