@@ -1,7 +1,7 @@
 const React = require("react")
 const Def = require("../default")
 
-function new_form() {
+function NewForm() {
   return (
     <Def title="Add a New Capsule">
       <body className="new">
@@ -31,16 +31,24 @@ function new_form() {
               <p>leave blank if no image is found</p>
             </div>
             <input
+              type="hidden"
+              id="status"
+              name="status"
+              value="" // Initially empty
+            />
+            <input
               className="btn btn-primary"
               type="submit"
               value="Save as Draft"
+              onClick={() => { document.getElementById("status").value = "draft"; }}
             />
             <input
               className="btn btn-primary"
               type="submit"
               value="Lock Capsule"
+              onClick={() => { document.getElementById("status").value = "locked"; }}
             />
-            <p> Once the capsule is locked, no modification can be done.</p>
+            <p>Once the capsule is locked, no modification can be done.</p>
           </form>
         </main>
       </body>
@@ -48,4 +56,4 @@ function new_form() {
   )
 }
 
-module.exports = new_form
+module.exports = NewForm

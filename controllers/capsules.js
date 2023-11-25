@@ -26,19 +26,29 @@ capsules.get('/', async(req, res)=>{
   res.render("capsules/index", { capsules })
 })
 
-// Create new capsule
+// Create new capsule with a specific status
 capsules.post("/", async (req, res) => {
     try {
-      const createCapsule = await Capsule.create(req.body)
-      if (!createCapsule) {
-        res.render("error404")
-      }
-      res.redirect("capsules")
+        const { name, date, place, image, status } = req.body; // Extract data including status
+
+        // Create a new capsule with the provided data including the status
+        const createCapsule = await Capsule.create({
+            name,
+            date,
+            place,
+            image,
+            status // Include the status in the creation of the capsule
+        });
+
+        if (!createCapsule) {
+            res.render("error404")
+        }
+        res.redirect("/capsules"); // Redirect to the capsules list page after creation
     } catch (err) {
-      console.log(err)
-      res.render("error404")
+        console.log(err)
+        res.render("error404")
     }
-  })
+})
 
 //get new page
 capsules.get("/new", (req, res) => {
