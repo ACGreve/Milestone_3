@@ -20,7 +20,7 @@ capsules.get("/login", (req, res) => {
   res.render("capsules/loginForm")
 })
 
-//Home Route for all the capsules
+//Index Route for all the capsules
 capsules.get('/', async(req, res)=>{
   const capsules = await Capsule.find()
   res.render("capsules/index", { capsules })
@@ -28,17 +28,17 @@ capsules.get('/', async(req, res)=>{
 
 // Create new capsule
 capsules.post("/", async (req, res) => {
-    try {
-      const createCapsule = await Capsule.create(req.body)
-      if (!createCapsule) {
-        res.render("error404")
-      }
-      res.redirect("capsules")
-    } catch (err) {
-      console.log(err)
+  try {
+    const createCapsule = await Capsule.create(req.body)
+    if (!createCapsule) {
       res.render("error404")
     }
-  })
+    res.redirect("capsules")
+  } catch (err) {
+    console.log(err)
+    res.render("error404")
+  }
+})
 
 //get new page
 capsules.get("/new", (req, res) => {
