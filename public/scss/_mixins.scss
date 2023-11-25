@@ -1,0 +1,30 @@
+@mixin scrolling-background-properties($background-image) {
+    background-image: url(#{$background-image});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@mixin overflow-hidden-views($background-image) {
+    @include scrolling-background-properties($background-image);
+    overflow: hidden;
+}
+
+@mixin centered-row {
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+@mixin transition($time: 0.3s, $type: ease-in-out) {
+    transition: $time $type !important;
+}
+
+@mixin scale-transform($scale: 1.05) {
+    transform: scale($scale);
+}
+
+@mixin transition-color($time: 0.3s, $type: ease) {
+    transition: color $time $type;
+}

@@ -1,0 +1,7 @@
+@function set-height($value) {
+    @return $value * 1vh;
+}
+
+@function set-width($value) {
+    @return $value * 1vw;
+}
