@@ -509,3 +509,14 @@ a:active {
     font-size: 0.7rem;
   }
 }/*# sourceMappingURL=main.css.map */
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:active {
+  display: none;
+}
+
+input[type="radio"]:active {
+}

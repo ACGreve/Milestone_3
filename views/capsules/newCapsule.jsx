@@ -1,7 +1,11 @@
-const React = require("react")
-const Def = require("../default")
+const React = require("react");
+const Def = require("../default");
 
 function NewForm() {
+  const handleRadioChange = (status) => {
+    document.getElementById("status").value = status;
+  };
+
   return (
     <Def title="Add a New Capsule">
       <body className="new">
@@ -36,24 +40,31 @@ function NewForm() {
               name="status"
               value="" // Initially empty
             />
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value="Save as Draft"
-              onClick={() => { document.getElementById("status").value = "draft"; }}
-            />
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value="Lock Capsule"
-              onClick={() => { document.getElementById("status").value = "locked"; }}
-            />
+            <div className="radio-buttons">
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="statusRadio"
+                  onChange={() => handleRadioChange("draft")}
+                />
+                <span className="btn btn-primary">Save as Draft</span>
+              </label>
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="statusRadio"
+                  onChange={() => handleRadioChange("locked")}
+                />
+                <span className="btn btn-primary">Lock Capsule</span>
+              </label>
+            </div>
             <p>Once the capsule is locked, no modification can be done.</p>
+            <input type="submit" className="btn btn-primary" value="Submit" />
           </form>
         </main>
       </body>
     </Def>
-  )
+  );
 }
 
-module.exports = NewForm
+module.exports = NewForm;
