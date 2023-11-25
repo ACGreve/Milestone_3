@@ -33,8 +33,14 @@ function new_form() {
             <input
               className="btn btn-primary"
               type="submit"
-              value="Add Capsule"
+              value="Save as Draft"
             />
+            <input
+              className="btn btn-primary"
+              type="submit"
+              value="Lock Capsule"
+            />
+            <p> Once the capsule is locked, no modification can be done.</p>
           </form>
         </main>
       </body>
