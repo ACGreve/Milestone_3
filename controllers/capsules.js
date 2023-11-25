@@ -26,6 +26,20 @@ capsules.get('/', async(req, res)=>{
   res.render("capsules/index", { capsules })
 })
 
+// Create new capsule
+capsules.post("/", async (req, res) => {
+    try {
+      const createCapsule = await Capsule.create(req.body)
+      if (!createCapsule) {
+        res.render("error404")
+      }
+      res.redirect("capsules")
+    } catch (err) {
+      console.log(err)
+      res.render("error404")
+    }
+  })
+
 //get new page
 capsules.get("/new", (req, res) => {
   res.render("capsules/newCapsule")
