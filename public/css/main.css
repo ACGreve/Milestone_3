@@ -510,13 +510,10 @@ a:active {
   }
 }/*# sourceMappingURL=main.css.map */
 
-input[type="radio"] {
+/*input[type="radio"] {
   display: none;
-}
+} */
 
-input[type="radio"]:active {
-  display: none;
-}
-
-input[type="radio"]:active {
+input[type="radio"]:focus {
+  background-color: #80bdff !important;
 }

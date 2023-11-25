@@ -3,6 +3,7 @@ const Def = require("../default");
 
 function NewForm() {
   const handleRadioChange = (status) => {
+    console.log(`Setting status to ${status}`);
     document.getElementById("status").value = status;
   };
 
