@@ -59,4 +59,19 @@ capsules.get("/:id", async (req, res) => {
   }
 })
 
+//delete capsule by index
+capsules.delete("/:id", async (req, res) => {
+  const { id } = req.params
+  try {
+    const capsule = await Capsule.findByIdAndDelete(id)
+    if (!capsule) {
+      res.render("error404")
+    }
+    res.redirect("/capsules")
+  } catch (err) {
+    console.log(err)
+    res.render("error404")
+  }
+})
+
 module.exports = capsules
