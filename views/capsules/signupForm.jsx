@@ -8,19 +8,19 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
 
-    if (password !== confirmPassword) {
-      setError("Passwords do not match")
-    } else {
-      setError("") // Reset error if passwords match
-      // Reset the fields after successful submission
-      setUsername("")
-      setPassword("")
-      setConfirmPassword("")
-    }
-  }
+  //   if (password !== confirmPassword) {
+  //     setError("Passwords do not match")
+  //   } else {
+  //     setError("") // Reset error if passwords match
+  //     // Reset the fields after successful submission
+  //     setUsername("")
+  //     setPassword("")
+  //     setConfirmPassword("")
+  //   }
+  // }
 
   return (
     <div>
@@ -28,7 +28,8 @@ function Signup() {
         <main>
           <h1>Sign Up</h1>
           {error && <p style={{ color: "red" }}>{error}</p>}
-          <form onSubmit={handleSubmit}>
+          {/* <form onSubmit={handleSubmit}> */}
+          <form method="POST" action>
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>

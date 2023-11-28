@@ -11,14 +11,14 @@ capsules.get('/data/seed', async (req, res)=>{
 })
 
 //get signup page
-capsules.get("/signup", (req, res) => {
-  res.render("capsules/signupForm")
-})
+// capsules.get("/signup", (req, res) => {
+//   res.render("capsules/signupForm")
+// })
 
 //get login page
-capsules.get("/login", (req, res) => {
-  res.render("capsules/loginForm")
-})
+// capsules.get("/login", (req, res) => {
+//   res.render("capsules/loginForm")
+// })
 
 //Index Route for all the capsules
 capsules.get('/', async(req, res)=>{
