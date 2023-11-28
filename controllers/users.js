@@ -23,7 +23,7 @@ users.post('/signup', async(req,res)=>{
         if(!createUser){
             res.render("error404")
         }
-        res.redirect("login")
+        res.redirect("/user")
     }catch(error){
       console.log(error)
     }
