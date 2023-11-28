@@ -45,6 +45,21 @@ capsules.get("/new", (req, res) => {
   res.render("capsules/newCapsule")
 })
 
+//get edit page
+capsules.get("/:id/edit", async (req, res) => {
+  try {
+    const { id } = req.params
+    const capsule = await Capsule.findById(id)
+    if (!capsule) {
+      res.render("error404")
+    }
+    res.render("capsules/editCapsule", { capsule })
+  } catch (err) {
+    console.log(err)
+    res.render("error404")
+  }
+})
+
 //get capsule by index
 capsules.get("/:id", async (req, res) => {
   try {
