@@ -74,6 +74,21 @@ capsules.get("/:id", async (req, res) => {
   }
 })
 
+//edit capsule
+capsules.put("/:id", async (req, res) => {
+  const { id } = req.params
+  try {
+    const capsule = await Capsule.findByIdAndUpdate(id, req.body)
+    if (!capsule) {
+      res.render("error404")
+    }
+    res.redirect(`/capsules/${req.params.id}`)
+  } catch (err) {
+    console.log(err)
+    res.render("error404")
+  }
+})
+
 //delete capsule by index
 capsules.delete("/:id", async (req, res) => {
   const { id } = req.params
