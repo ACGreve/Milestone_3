@@ -1,10 +1,17 @@
-const React = require("react");
+import React, { useState } from "react";
 const Def = require("../default");
 
 function NewForm() {
-  const handleRadioChange = (status) => {
-    console.log(`Setting status to ${status}`);
-    document.getElementById("status").value = status;
+  const [status, setStatus] = useState('');
+
+  const handleDraft = () => {
+    setStatus("draft");
+    console.log({status})
+  };
+
+  const handleLock = () => {
+    setStatus("locked");
+    console.log("Status set to locked:", status);
   };
 
   return (
@@ -35,18 +42,13 @@ function NewForm() {
               <input className="form-control" id="image" name="image" />
               <p>leave blank if no image is found</p>
             </div>
-            <input
-              type="hidden"
-              id="status"
-              name="status"
-              value="" // Initially empty
-            />
             <div className="radio-buttons">
               <label className="radio-label">
                 <input
                   type="radio"
                   name="statusRadio"
-                  onChange={() => handleRadioChange("draft")}
+                  onChange={handleDraft}
+                  checked={status === "draft"} // Ensures button is checked when status is "draft"
                 />
                 <span className="btn btn-primary">Save as Draft</span>
               </label>
@@ -54,7 +56,8 @@ function NewForm() {
                 <input
                   type="radio"
                   name="statusRadio"
-                  onChange={() => handleRadioChange("locked")}
+                  onChange={handleLock}
+                  checked={status === "locked"} // Ensures button is checked when status is "locked"
                 />
                 <span className="btn btn-primary">Lock Capsule</span>
               </label>
