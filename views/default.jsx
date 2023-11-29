@@ -37,7 +37,7 @@ function Default(props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/users">
+              <a className="nav-link" href="/users/login">
                 Login
               </a>
             </li>

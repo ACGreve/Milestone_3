@@ -29,7 +29,7 @@ function Signup() {
           <h1>Sign Up</h1>
           {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
           {/* <form onSubmit={handleSubmit}> */}
-          <form method="POST" >
+          <form method="POST" action='/users'>
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="name">Username</label>

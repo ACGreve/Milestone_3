@@ -8,7 +8,7 @@ users.get("/data/seed", async (req, res) => {
 })
 
 //Home Route for login
-users.get('/', (req, res) => {
+users.get('/login', (req, res) => {
     res.render("capsules/loginForm")
 })
 
@@ -23,7 +23,7 @@ users.post('/signup', async(req,res)=>{
         if(!createUser){
             res.render("error404")
         }
-        res.redirect("/user")
+        res.redirect("/users")
     }catch(error){
       console.log(error)
     }
