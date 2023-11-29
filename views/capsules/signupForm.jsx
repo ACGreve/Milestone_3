@@ -3,10 +3,10 @@ const Default = require("../default")
 import { useState } from "react"
 
 function Signup() {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  const [confirmPassword, setConfirmPassword] = useState("")
-  const [error, setError] = useState("")
+  // const [username, setUsername] = useState("")
+  // const [password, setPassword] = useState("")
+  // const [confirmPassword, setConfirmPassword] = useState("")
+  // const [error, setError] = useState("")
 
   // const handleSubmit = (e) => {
   //   e.preventDefault()
@@ -26,18 +26,17 @@ function Signup() {
     <div>
       <Default>
         <main>
-          <h1>Sign Up</h1>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          {/* //<form onSubmit={}>// */}
-          <form method="POST" action = '/users'>
+          {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+          {/* <form onSubmit={handleSubmit}> */}
+          <form method="POST" action='/users'>
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>
                 <input
                   type="username"
                   required
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  // value={username}
+                  // onChange={(e) => setUsername(e.target.value)}
                   className="form-control"
                   id="username"
                   name="username"
@@ -48,8 +47,8 @@ function Signup() {
                 <input
                   type="password"
                   required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  // value={password}
+                  // onChange={(e) => setPassword(e.target.value)}
                   className="form-control"
                   id="password"
                   name="password"
@@ -59,9 +58,9 @@ function Signup() {
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <input
                   type="password"
-                  required
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  // required
+                  // value={confirmPassword}
+                  // onChange={(e) => setConfirmPassword(e.target.value)}
                   className="form-control"
                   id="confirmPassword"
                   name="confirmPassword"

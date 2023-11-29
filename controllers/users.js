@@ -10,14 +10,15 @@ users.get("/data/seed", async (req, res) => {
 })
 
 //Home Route for login
-users.get('/', (req, res) => {
+users.get('/login', (req, res) => {
     checkUser()
-    res.render('capsules/loginForm')
+    res.render("capsules/loginForm")
 })
 
-users.post('/loginForm', async (req, res) =>{
+users.post('/login', async (req, res) =>{
     const { username, password } = req.body
-    const user = await User.findOne({username})
+    const user = await User.findOne({ username })
+
     if(!user){
         console.log('user not found')
     }
@@ -30,7 +31,7 @@ users.post('/loginForm', async (req, res) =>{
 
 //Sign Up Form
 users.get('/signup', (req, res) => {
-    res.render('capsules/signupForm')
+    res.render("capsules/signupForm")
 })
 
 users.post('/', async(req,res)=>{
@@ -39,7 +40,8 @@ users.post('/', async(req,res)=>{
         if(!createUser){
             res.render("error404")
         }
-        res.redirect('capsules/loginForm')
+        res.redirect("/users/login")
+
     }catch(error){
       console.log(error)
     }

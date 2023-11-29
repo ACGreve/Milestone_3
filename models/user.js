@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
@@ -32,7 +33,7 @@ userSchema.statics.login = async function (username, password) {
     }
     throw Error("incorrect password");
   }
-  throw Error("incorrect name");
+  throw Error("incorrect username");
 };
 
   module.exports = mongoose.model("Users", userSchema);

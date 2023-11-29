@@ -37,12 +37,12 @@ function Default(props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/login">
+              <a className="nav-link" href="/users/login">
                 Login
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="users/signup">
+              <a className="nav-link" href="/users/signup">
                 Sign Up
               </a>
             </li>
