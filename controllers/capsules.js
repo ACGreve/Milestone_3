@@ -10,15 +10,15 @@ capsules.get('/data/seed', async (req, res)=>{
   res.redirect('/capsules')
 })
 
-//get signup page
-capsules.get("/signup", (req, res) => {
-  res.render("capsules/signupForm")
-})
+// //get signup page
+// capsules.post("/signup", (req, res) => {
+//   res.render("capsules/signupForm")
+// })
 
-//get login page
-capsules.get("/login", (req, res) => {
-  res.render("capsules/loginForm")
-})
+// //get login page
+// capsules.get("/login", (req, res) => {
+//   res.render("capsules/loginForm")
+// })
 
 //Index Route for all the capsules
 capsules.get('/', async(req, res)=>{

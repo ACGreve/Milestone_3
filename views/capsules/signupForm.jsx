@@ -8,19 +8,19 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
 
-    if (password !== confirmPassword) {
-      setError("Passwords do not match")
-    } else {
-      setError("") // Reset error if passwords match
-      // Reset the fields after successful submission
-      setUsername("")
-      setPassword("")
-      setConfirmPassword("")
-    }
-  }
+  //   if (password !== confirmPassword) {
+  //     setError("Passwords do not match")
+  //   } else {
+  //     setError("") // Reset error if passwords match
+  //     // Reset the fields after successful submission
+  //     setUsername("")
+  //     setPassword("")
+  //     setConfirmPassword("")
+  //   }
+  // }
 
   return (
     <div>
@@ -28,7 +28,8 @@ function Signup() {
         <main>
           <h1>Sign Up</h1>
           {error && <p style={{ color: "red" }}>{error}</p>}
-          <form onSubmit={handleSubmit}>
+          {/* //<form onSubmit={}>// */}
+          <form method="POST" action = '/users'>
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>
@@ -54,7 +55,7 @@ function Signup() {
                   name="password"
                 />
               </div>
-              <div className="col-sm-6 form-group">
+              {/* <div className="col-sm-6 form-group">
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <input
                   type="password"
@@ -65,7 +66,7 @@ function Signup() {
                   id="confirmPassword"
                   name="confirmPassword"
                 />
-              </div>
+              </div> */}
             </div>
             <input className="btn btn-primary" type="submit" value="Sign Up" />
           </form>
