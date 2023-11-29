@@ -32,15 +32,15 @@ function Signup() {
           <form method="POST" action='/users'>
             <div className="row">
               <div className="col-sm-6 form-group">
-                <label htmlFor="name">Username</label>
+                <label htmlFor="username">Username</label>
                 <input
-                  type="name"
+                  type="username"
                   required
                   // value={username}
                   // onChange={(e) => setUsername(e.target.value)}
                   className="form-control"
-                  id="name"
-                  name="name"
+                  id="username"
+                  name="username"
                 />
               </div>
               <div className="col-sm-6 form-group">

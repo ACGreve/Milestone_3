@@ -12,18 +12,31 @@ users.get('/login', (req, res) => {
     res.render("capsules/loginForm")
 })
 
+users.post('/login', async (req, res) =>{
+    const { name, password } = req.body
+    const user = await User.findOne({ name })
+    if(!user){
+        console.log('user not found')
+    }
+    if(password === user.password){
+        console.log('success')
+    }else{
+        console.log('invalid password')
+    }
+})
+
 //Sign Up Form
 users.get('/signup', (req, res) => {
     res.render("capsules/signupForm")
 })
 
-users.post('/signup', async(req,res)=>{
+users.post('/', async(req,res)=>{
     try{
         const createUser = await User.create(req.body)
         if(!createUser){
             res.render("error404")
         }
-        res.redirect("/users")
+        res.redirect("/users/login")
     }catch(error){
       console.log(error)
     }
