@@ -13,8 +13,8 @@ users.get('/login', (req, res) => {
 })
 
 users.post('/login', async (req, res) =>{
-    const { name, password } = req.body
-    const user = await User.findOne({ name })
+    const { username, password } = req.body
+    const user = await User.findOne({ username })
     if(!user){
         console.log('user not found')
     }
