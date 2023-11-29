@@ -3,8 +3,8 @@ const Default = require("../default")
 import { useState } from "react"
 
 function login() {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
+  // const [username, setUsername] = useState("")
+  // const [password, setPassword] = useState("")
 
   return (
     <div>
@@ -19,8 +19,8 @@ function login() {
                 <input
                   type="username"
                   required
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  // value={username}
+                  // onChange={(e) => setUsername(e.target.value)}
                   className="form-control"
                   id="username"
                   name="username"
@@ -31,8 +31,8 @@ function login() {
                 <input
                   type="password"
                   required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  // value={password}
+                  // onChange={(e) => setPassword(e.target.value)}
                   className="form-control"
                   id="password"
                   name="password"

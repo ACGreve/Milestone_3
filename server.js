@@ -5,6 +5,7 @@ const mongoose = require("mongoose")
 const methodOverride = require("method-override")
 const app = express()
 
+
 // MIDDLEWARE
 app.use(express.json())
 app.use(methodOverride("_method"))
@@ -39,5 +40,6 @@ const PORT = process.env.PORT
 app.listen(process.env.PORT, () => {
   console.log(`Listening on ${process.env.PORT}`)
 })
+
 
 module.exports = app
