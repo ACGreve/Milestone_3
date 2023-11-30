@@ -10,9 +10,6 @@ capsules.get('/data/seed', async (req, res)=>{
   res.redirect('/capsules')
 })
 
-<<<<<<< HEAD
-
->>>>>>> Developer
 //Index Route for all the capsules
 capsules.get('/', async(req, res)=>{
   const capsules = await Capsule.find()

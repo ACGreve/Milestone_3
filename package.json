@@ -13,19 +13,23 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-react-views": "^0.11.0",
+    "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
     "mongodb": "^6.3.0",
-    "mongoose": "^8.0.1",
+    "mongoose": "^8.0.2",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
     "pg": "^8.11.3",
     "react": "^18.2.0",
+    "react-cookie": "^6.1.1",
     "react-dom": "^18.2.0",
-    "sass": "^1.69.5",
-    "sequelize": "^6.35.1",
-    "sequelize-cli": "^6.6.2"
+    "react-router-dom": "^6.20.0",
+    "react-toastify": "^9.1.3",
+    "sass": "^1.69.5"
   }
 }

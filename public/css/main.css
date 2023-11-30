@@ -148,8 +148,7 @@ body.show .img-fluid {
 }
 body.show .col-md-4 img {
   height: 70vh !important;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 body.show .col-md-8 {
   margin: 0 auto;
@@ -209,8 +208,7 @@ body.show .row {
   body.show img {
     height: 70vh !important;
     width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   body.show .col-md-4,
   body.show .col-md-8 {
@@ -225,8 +223,7 @@ body.show .row {
 @media (max-width: 992px) {
   body.show .col-md-4 img {
     height: 60vh !important;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -241,8 +238,7 @@ body.show .row {
   }
   body.show .col-md-4 img {
     height: 50vh !important;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   body.show .show-row {
     text-align: center;

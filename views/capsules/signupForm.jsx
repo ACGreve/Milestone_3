@@ -26,7 +26,6 @@ function Signup() {
     <div>
       <Default>
         <main>
-          <h1>Sign Up</h1>
           {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
           {/* <form onSubmit={handleSubmit}> */}
           <form method="POST" action='/users'>
