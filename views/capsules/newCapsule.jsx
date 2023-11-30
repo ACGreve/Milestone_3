@@ -1,7 +1,19 @@
-const React = require("react")
-const Def = require("../default")
+import React, { useState } from "react";
+const Def = require("../default");
 
-function new_form() {
+function NewForm() {
+  const [status, setStatus] = useState('');
+
+  const handleDraft = () => {
+    setStatus("draft");
+    console.log({status})
+  };
+
+  const handleLock = () => {
+    setStatus("locked");
+    console.log("Status set to locked:", status);
+  };
+
   return (
     <Def title="Add a New Capsule">
       <body className="new">
@@ -30,22 +42,33 @@ function new_form() {
               <input className="form-control" id="image" name="image" />
               <p>leave blank if no image is found</p>
             </div>
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value="Save as Draft"
-            />
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value="Lock Capsule"
-            />
-            <p> Once the capsule is locked, no modification can be done.</p>
+            <div className="radio-buttons">
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="statusRadio"
+                  onChange={handleDraft}
+                  checked={status === "draft"} // Ensures button is checked when status is "draft"
+                />
+                <span className="btn btn-primary">Save as Draft</span>
+              </label>
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="statusRadio"
+                  onChange={handleLock}
+                  checked={status === "locked"} // Ensures button is checked when status is "locked"
+                />
+                <span className="btn btn-primary">Lock Capsule</span>
+              </label>
+            </div>
+            <p>Once the capsule is locked, no modification can be done.</p>
+            <input type="submit" className="btn btn-primary" value="Submit" />
           </form>
         </main>
       </body>
     </Def>
-  )
+  );
 }
 
-module.exports = new_form
+module.exports = NewForm;
