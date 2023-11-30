@@ -10,7 +10,6 @@ const capsuleSchema = new mongoose.Schema({
     },
     status: { 
         type: String, 
-        default: 'draft' 
     }, // 'draft' or 'locked'
     lockedBy: { 
         type: String, 

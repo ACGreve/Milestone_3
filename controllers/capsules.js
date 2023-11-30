@@ -17,27 +17,40 @@ capsules.get('/', async(req, res)=>{
 })
 
 // Create new capsule with a specific status
+// capsules.post("/", async (req, res) => {
+//     try {
+//         const { name, date, place, image, status } = req.body; // Extract data including status
+
+//         // Create a new capsule with the provided data including the status
+//         const createCapsule = await Capsule.create({
+//             name,
+//             date,
+//             place,
+//             image,
+//             status // Include the status in the creation of the capsule
+//         });
+
+//         if (!createCapsule) {
+//             res.render("error404")
+//         }
+//         res.redirect("/capsules"); // Redirect to the capsules list page after creation
+//     } catch (err) {
+//         console.log(err)
+//         res.render("error404")
+//     }
+// })
+
 capsules.post("/", async (req, res) => {
-    try {
-        const { name, date, place, image, status } = req.body; // Extract data including status
-
-        // Create a new capsule with the provided data including the status
-        const createCapsule = await Capsule.create({
-            name,
-            date,
-            place,
-            image,
-            status // Include the status in the creation of the capsule
-        });
-
-        if (!createCapsule) {
-            res.render("error404")
-        }
-        res.redirect("/capsules"); // Redirect to the capsules list page after creation
-    } catch (err) {
-        console.log(err)
-        res.render("error404")
+  try {
+    const createCap = await Capsule.create(req.body)
+    if (!createCap) {
+      res.render("error404")
     }
+    res.redirect("/capsules")
+  } catch (err) {
+    console.log(err)
+    res.render("error404")
+  }
 })
 
 //get new page
