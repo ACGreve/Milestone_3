@@ -10,7 +10,7 @@ function index(data) {
         className="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-2"
       >
         <a href={`/capsules/${capsule.id}`}>
-          <img src={capsule.image} alt='Image not available' />
+          <img src={capsule.capsuleImage} alt='Image not available' />
         </a>
         <h2>
           <a href={`/capsules/${capsule.id}`}>{capsule.name}</a>

@@ -30,6 +30,11 @@ function NewForm() {
               />
             </div>
             <div className="form-group">
+              <label htmlFor="capsuleImage">Capsule Lock Image</label>
+              <input className="form-control" id="capsuleImage" name="capsuleImage" />
+              <p>leave blank if no image is found</p>
+            </div>
+            <div className="form-group">
               <label htmlFor="date">Encapsulation Date</label>
               <input className="form-control" id="date" name="date" />
             </div>
@@ -39,7 +44,8 @@ function NewForm() {
             </div>
             <div className="form-group">
               <label htmlFor="image">Image</label>
-              <input className="form-control" id="image" name="image" />
+              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg"/>
+              <p>To add multiple images hold CTRL when selecting.</p>
               <p>leave blank if no image is found</p>
             </div>
             <div className="radio-buttons">
