@@ -11,7 +11,7 @@ users.get("/data/seed", async (req, res) => {
 
 //Home Route for login
 users.get('/login', (req, res) => {
-    checkUser()
+    // checkUser()
     res.render("capsules/loginForm")
 })
 
