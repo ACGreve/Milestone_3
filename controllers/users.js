@@ -25,6 +25,7 @@ users.post('/login', async (req, res) =>{
     }
     if(await bcrypt.compare(password, user.password)){
         console.log('success')
+        res.redirect('/capsules')
     }else{
         console.log('invalid password')
     }

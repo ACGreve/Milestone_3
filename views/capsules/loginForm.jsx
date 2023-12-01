@@ -8,45 +8,42 @@ const Default = require("../default")
 
 function login() {
 
-module.exports.login = async (req, res) => {
-  // const [cookies] = useCookies([])
-  // //const navigate = useNavigate();
-  // //const history = useHistory();
+  // const [cookies] = useCookies([]);
+  // const navigate = useNavigate();
   // useEffect(() => {
   //   if (cookies.jwt) {
-  //     //history.push("/");
-  //     window.location.href = "/";
-  //   } 
-  // }, );   //[cookies, history]);
+  //     navigate("/");
+  //   }
+  // }, [cookies, navigate]);
 
-  const [values, setValues] = useState({ name: "", password: "" });
+  // const [values, setValues] = useState({ email: "", password: "" });
   // const generateError = (error) =>
   //   toast.error(error, {
   //     position: "bottom-right",
-  //   });
+  //   })
   // const handleSubmit = async (event) => {
   //   event.preventDefault();
-    try {
-      const { data } = await axios.post(
-        "http://localhost:5001/users/login",
-        {
-          ...values,
-        },
-        { withCredentials: true }
-      );
-      if (data) {
-        if (data.errors) {
-          const { username, password } = data.errors;
-          if (username) generateError(username);
-          else if (password) generateError(password);
-        } else {
-          window.location.href = "/";
-        }
-      }
-    } catch (ex) {
-      console.log(ex);
-    }
-  };
+  //   try {
+  //     const { data } = await axios.post(
+  //       "http://localhost:5001/users/login",
+  //       {
+  //         ...values,
+  //       },
+  //       { withCredentials: true }
+  //     );
+  //     if (data) {
+  //       if (data.errors) {
+  //         const { username, password } = data.errors;
+  //         if (username) generateError(username);
+  //         else if (password) generateError(password);
+  //       } else {
+  //         window.location.href = "/";
+  //       }
+  //     }
+  //   } catch (ex) {
+  //     console.log(ex);
+  //   }
+  // };
   
   return (
     <div>
