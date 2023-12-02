@@ -22,12 +22,12 @@ app.engine("jsx", require("express-react-views").createEngine())
 app.use(cookieParser())
 app.use(authRoutes)
 app.use(bodyParser.json())
-app.use('/api/signup', require('./controllers/users')){
+//app.use('/api/signup', require('./controllers/users')){
 
-// app.use('/api/signup', async (req, res) => {
-//   console.log(req.body)
-//   res.json({status: 'ok'})
-// })
+app.use('/api/signup', async (req, res) => {
+  console.log(req.body)
+  res.json({status: 'ok'})
+})
 
 // app.use(
 //   cors({
