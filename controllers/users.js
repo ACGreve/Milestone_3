@@ -4,6 +4,7 @@ const userSeedData = require("../models/userSeedData")
 const { signup, login } = require("../controllers/authorize");
 const { checkUser } = require("../middlewares/authorize");
 
+
 users.get("/data/seed", async (req, res) => {
     await User.insertMany(userSeedData)
     res.redirect('/')
@@ -22,12 +23,14 @@ users.post('/login', async (req, res) =>{
     if(!user){
         console.log('user not found')
     }
-    if(password === user.password){
+    if(await bcrypt.compare(password, user.password)){
         console.log('success')
+        res.redirect('/capsules')
     }else{
         console.log('invalid password')
     }
 })
+
 
 //Sign Up Form
 users.get('/signup', (req, res) => {
