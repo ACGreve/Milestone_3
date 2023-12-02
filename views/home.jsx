@@ -5,8 +5,8 @@ function Home() {
   return (
     <Default title="Welcome Page">
       <body className="home">
-        <h1>Time Capsules</h1>
-        <h2>Memories</h2>
+        <h1>Era Echos</h1>
+        <h2>Time Capsule Memories</h2>
         <a href="/capsules">
           <button className="btn-primary">Capsule Collection</button>
         </a>

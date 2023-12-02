@@ -17,6 +17,7 @@ capsules.get('/', async(req, res)=>{
 })
 
 // Create new capsule with a specific status
+
 // capsules.post("/", async (req, res) => {
 //     try {
 //         const { name, date, place, image, status } = req.body; // Extract data including status
