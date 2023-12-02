@@ -39,8 +39,13 @@ function NewForm() {
               <input className="form-control" id="date" name="date" />
             </div>
             <div className="form-group">
-              <label htmlFor="place">Place</label>
-              <input className="form-control" id="place" name="place" />
+              <label htmlFor="note">Note to Future Self</label>
+              <textarea
+                className="form-control tall"
+                id="note"
+                name="note"
+                placeholder="Enter your note..."
+              />
             </div>
             <div className="form-group">
               <label htmlFor="image">Image</label>

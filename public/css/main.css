@@ -344,6 +344,7 @@ body.error404 h1 {
   padding-bottom: 15px;
   text-align: left;
 }
+
 .navbar .navbar-nav {
   margin-left: 1.2em;
   margin-right: auto;
@@ -516,4 +517,14 @@ a:active {
 
 input[type="radio"]:focus {
   background-color: #80bdff !important;
+}
+
+textarea.tall {
+  min-height: 100px; /* Set an initial height */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+h3{
+  font-size: 1em !important;
+  color: white;
 }
