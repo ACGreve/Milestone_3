@@ -1,34 +1,31 @@
 import React, { useState, useEffect } from "react"
-// import { useCookies } from "react-cookie"
+import { useCookies } from "react-cookie"
 // import { Link } from "react-router-dom"
-//import { Link, useNavigate } from "react-router-dom"
-// import { ToastContainer, toast } from "react-toastify"
+import { Link, useNavigate } from "react-router-dom"
+import { ToastContainer, toast } from "react-toastify"
 // const React = require("react")
 const Default = require("../default")
 
 function login() {
 
-//module.exports.login = async (req, res) => {
-  // const [cookies] = useCookies([])
-  // //const navigate = useNavigate();
-  // //const history = useHistory();
+  // const [cookies] = useCookies([]);
+  // const navigate = useNavigate();
   // useEffect(() => {
   //   if (cookies.jwt) {
-  //     //history.push("/");
-  //     window.location.href = "/";
-  //   } 
-  // }, );   //[cookies, history]);
+  //     navigate("/");
+  //   }
+  // }, [cookies, navigate]);
 
-  // const [values, setValues] = useState({ name: "", password: "" });
+  // const [values, setValues] = useState({ email: "", password: "" });
   // const generateError = (error) =>
   //   toast.error(error, {
   //     position: "bottom-right",
-  //   });
+  //   })
   // const handleSubmit = async (event) => {
   //   event.preventDefault();
   //   try {
   //     const { data } = await axios.post(
-  //       "http://localhost:5001/capsules/loginForm",
+  //       "http://localhost:5001/users/login",
   //       {
   //         ...values,
   //       },
@@ -53,8 +50,8 @@ function login() {
       <Default>
         <main>
           <h1>Login</h1>
-
-          <form onSubmit={(e) => handleSubmit(e)}>
+          <form method="POST">
+          {/* <form onSubmit={(e) => handleSubmit(e)}> */}
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>
