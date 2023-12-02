@@ -168,6 +168,27 @@ body.show {
     @include centered-row;
   }
 
+  /* show signup */
+body.signup {
+  @include scrolling-background-properties($signup-background);
+ 
+  .pwdfields input {
+    justify-content: center;
+    display: block;
+    margin-bottom: 10px; /* adjust as needed */
+  }
+
+  .col-sm-6 {
+    margin: 12 auto;
+    padding: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .row {
+    @include centered-row;
+  }
+}
+  
   /* different viewport size adjustments */
   @media (min-width: 1401px) {
     h1 {

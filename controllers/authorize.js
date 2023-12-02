@@ -38,8 +38,8 @@ const handleErrors = (err) => {
   
   module.exports.signup = async (req, res, next) => {
     try {
-      const { name, password } = req.body;
-      const user = await User.create({ name, password });
+      const { username, password } = req.body;
+      const user = await User.create({ username, password });
       const token = createToken(user._id);
   
       res.cookie("jwt", token, {
@@ -57,14 +57,15 @@ const handleErrors = (err) => {
   };
   
   module.exports.login = async (req, res) => {
-    const { name, password } = req.body;
+    const { username, password } = req.body;
     try {
-      const user = await User.login(name, password);
+      const user = await User.login(username, password);
       const token = createToken(user._id);
       res.cookie("jwt", token, { httpOnly: false, maxAge: maxAge * 1000 });
       res.status(200).json({ user: user._id, status: true });
     } catch (err) {
       const errors = handleErrors(err);
+      console.log("User login error: " + err )
       res.json({ errors, status: false });
     }
   };

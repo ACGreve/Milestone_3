@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
+// import { cookies } from "react-cookie"
 
 module.exports.checkUser = (req, res, next) => {
     const token = req.cookies.jwt;
@@ -12,7 +13,7 @@ module.exports.checkUser = (req, res, next) => {
             next();
           } else {
             const user = await User.findById(decodedToken.id);
-            if (user) res.json({ status: true, user: user.name });
+            if (user) res.json({ status: true, user: user.username });
             else res.json({ status: false });
             next();
           }

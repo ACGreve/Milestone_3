@@ -119,7 +119,6 @@ body.capsules .show-row {
   background-color: rgba(22, 22, 22, 0.65);
 }
 body.capsules .row {
-  text-align: center;
   margin-left: 5em;
   margin-right: 5em;
 }
@@ -131,6 +130,7 @@ body.show {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  /* show signup */
   /* different viewport size adjustments */
 }
 body.show h1 {
@@ -156,7 +156,27 @@ body.show .col-md-8 {
   font-size: 1.3rem;
 }
 body.show .row {
-  text-align: center;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+body.show body.signup {
+  background-image: url(https://www.pexels.com/photo/photo-of-night-sky-1025469);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+body.show body.signup .pwdfields input {
+  justify-content: center;
+  display: block;
+  margin-bottom: 10px; /* adjust as needed */
+}
+body.show body.signup .col-sm-6 {
+  margin: 12 auto;
+  padding: 0.75rem;
+  font-size: 1.3rem;
+}
+body.show body.signup .row {
   margin-left: 5em;
   margin-right: 5em;
 }
@@ -505,11 +525,3 @@ a:active {
     font-size: 0.7rem;
   }
 }/*# sourceMappingURL=main.css.map */
-
-/*input[type="radio"] {
-  display: none;
-} */
-
-input[type="radio"]:focus {
-  background-color: #80bdff !important;
-}
