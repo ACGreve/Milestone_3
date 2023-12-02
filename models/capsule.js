@@ -21,6 +21,19 @@ const capsuleSchema = new mongoose.Schema({
         type: String, 
         default: null 
     }, // User ID who locked the document
+    subDate: {
+        type: Date,
+        default: Date.now
+    }
 })
+
+capsuleSchema.virtual('unlockDate').get(function(){
+    const unlockDate = new Date(this.submissionDate)
+    
+})
+
+
+
+
 
 module.exports = mongoose.model('Capsule', capsuleSchema)

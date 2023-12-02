@@ -41,10 +41,10 @@ function login() {
                 />
               </div>
             </div>
+            <p>
+              Don't have an account? Sign up <a href="/users/signup">here</a>
+            </p>
             <input className="btn btn-primary" type="submit" value="Login" />
-            {/* <span>
-              Don't have an account ?<Link to="capsules/signup"> Signup </Link>
-            </span> */}
           </form>
           {/* <ToastContainer /> */}
         </main>
