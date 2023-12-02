@@ -11,9 +11,11 @@ const capsuleSchema = new mongoose.Schema({
     image:{
         type: String
     },
+    note:{
+        type: String
+    },
     status: { 
         type: String, 
-        default: 'draft' 
     }, // 'draft' or 'locked'
     lockedBy: { 
         type: String, 

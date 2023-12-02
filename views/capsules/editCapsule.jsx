@@ -18,7 +18,17 @@ function edit_form(data) {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="date">Date </label>
+              <label htmlFor="capsuleImage">Capsule Lock Image</label>
+              <input 
+              className="form-control" 
+              id="capsuleImage" 
+              name="capsuleImage" 
+              defaultValue={data.capsule.capsuleImage}
+              />
+              <p>leave blank if no image is found</p>
+            </div>
+            <div className="form-group">
+              <label htmlFor="date">Encapsulation Date </label>
               <input
                 className="form-control"
                 id="date"
@@ -28,13 +38,13 @@ function edit_form(data) {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="place">Place</label>
-              <input
-                className="form-control"
-                id="place"
+              <label htmlFor="note">Note to Future Self</label>
+              <textarea
+                className="form-control tall"
+                id="note"
                 type="text"
-                name="place"
-                defaultValue={data.capsule.place}
+                name="note"
+                defaultValue={data.capsule.note}
               />
             </div>
             <div className="form-group">

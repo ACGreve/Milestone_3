@@ -20,7 +20,8 @@ function show(data) {
               <h1>{data.capsule.name}</h1>
               <br />
               <p>Date: {data.capsule.date}</p>
-              <p>Place: {data.capsule.place}</p>
+              <p>Note to Future Self: </p>
+              <h3 className="white"> {data.capsule.note}</h3>
               <br />
               {isLocked ? (
                 <div className="locked-warning">

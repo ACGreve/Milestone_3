@@ -3,6 +3,7 @@ const User = require("../models/user")
 const userSeedData = require("../models/userSeedData")
 const { signup, login } = require("../controllers/authorize");
 const { checkUser } = require("../middlewares/authorize");
+const bcrypt = require("bcrypt")
 
 users.get("/data/seed", async (req, res) => {
     await User.insertMany(userSeedData)
@@ -11,7 +12,7 @@ users.get("/data/seed", async (req, res) => {
 
 //Home Route for login
 users.get('/login', (req, res) => {
-    checkUser()
+    // checkUser()
     res.render("capsules/loginForm")
 })
 
@@ -22,8 +23,9 @@ users.post('/login', async (req, res) =>{
     if(!user){
         console.log('user not found')
     }
-    if(password === user.password){
+    if(await bcrypt.compare(password, user.password)){
         console.log('success')
+        res.redirect('/capsules')
     }else{
         console.log('invalid password')
     }

@@ -1,69 +1,57 @@
 import React, { useState, useEffect } from "react"
 import { useCookies } from "react-cookie"
-import { Link } from "react-router-dom"
-//import { Link, useNavigate } from "react-router-dom"
+// import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify"
-
-//const React = require("react")
+// const React = require("react")
 const Default = require("../default")
 
-function login() {
+function LoginForm() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-//module.exports.login = async (req, res) => {
-  const [cookies] = useCookies([])
-  //const navigate = useNavigate();
-  //const history = useHistory();
-  useEffect(() => {
-    if (cookies.jwt) {
-      //history.push("/");
-      window.location.href = "/";
-    } 
-  }, );   //[cookies, history]);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const [values, setValues] = useState({ name: "", password: "" });
-  const generateError = (error) =>
-    toast.error(error, {
-      position: "bottom-right",
-    });
-  const handleSubmit = async (event) => {
-    event.preventDefault();
     try {
-      const { data } = await axios.post(
-        "http://localhost:5001/capsules/loginForm",
-        {
-          ...values,
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        { withCredentials: true }
-      );
-      if (data) {
-        if (data.errors) {
-          const { username, password } = data.errors;
-          if (name) generateError(name);
-          else if (password) generateError(password);
-        } else {
-          window.location.href = "/";
-        }
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (response.ok) {
+        // Login successful
+        const data = await response.json();
+        localStorage.setItem('jwt', data.token); // Store token in localStorage
+        // Redirect or update UI accordingly
+      } else {
+        // Handle login failure
+        console.log('Login failed');
       }
-    } catch (ex) {
-      console.log(ex);
+    } catch (error) {
+      console.error('Error:', error);
     }
   };
-  
+
   return (
     <div>
       <Default>
         <main>
           <h1>Login</h1>
-
-          <form onSubmit={(e) => handleSubmit(e)}>
+          {/*<form method="POST">*/}
+          <form onSubmit={(e) => handleSubmit(e)}> 
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>
                 <input
-                  type="username"
                   required
-                  // value={username}
-                  // onChange={(e) => setUsername(e.target.value)}
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   className="form-control"
                   id="username"
                   name="username"
@@ -74,8 +62,9 @@ function login() {
                 <input
                   type="password"
                   required
-                  //value={password}
-                  //onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="form-control"
                   id="password"
                   name="password"
@@ -83,15 +72,16 @@ function login() {
               </div>
             </div>
             <input className="btn btn-primary" type="submit" value="Login" />
-            <span>
+            {/* <span>
               Don't have an account ?<Link to="capsules/signup"> Signup </Link>
-            </span>
+            </span> */}
           </form>
-          <ToastContainer />
+          {/* <ToastContainer /> */}
         </main>
       </Default>
     </div>
   )
 }
 
-module.exports = login
+export default LoginForm;
+
