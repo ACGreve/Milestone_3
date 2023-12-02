@@ -19,42 +19,42 @@ function login() {
   //   } 
   // }, );   //[cookies, history]);
 
-  // const [values, setValues] = useState({ name: "", password: "" });
+  const [values, setValues] = useState({ name: "", password: "" })
   // const generateError = (error) =>
   //   toast.error(error, {
   //     position: "bottom-right",
   //   });
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     const { data } = await axios.post(
-  //       "http://localhost:5001/capsules/loginForm",
-  //       {
-  //         ...values,
-  //       },
-  //       { withCredentials: true }
-  //     );
-  //     if (data) {
-  //       if (data.errors) {
-  //         const { username, password } = data.errors;
-  //         if (username) generateError(username);
-  //         else if (password) generateError(password);
-  //       } else {
-  //         window.location.href = "/";
-  //       }
-  //     }
-  //   } catch (ex) {
-  //     console.log(ex);
-  //   }
-  // };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const { data } = await axios.post(
+        "http://localhost:5001/users/login",
+        {
+          ...values,
+        },
+        { withCredentials: true }
+      );
+      if (data) {
+        if (data.errors) {
+          const { username, password } = data.errors;
+          if (username) generateError(username);
+          else if (password) generateError(password);
+        } else {
+          window.location.href = "/";
+        }
+      }
+    } catch (ex) {
+      console.log(ex);
+    }
+  }
   
   return (
     <div>
       <Default>
         <main>
           <h1>Login</h1>
-
-          <form onSubmit={(e) => handleSubmit(e)}>
+          <form method="POST">
+          {/* <form onSubmit={(e) => handleSubmit(e)}> */}
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>
