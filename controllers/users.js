@@ -3,7 +3,7 @@ const User = require("../models/user")
 const userSeedData = require("../models/userSeedData")
 const { signup, login } = require("../controllers/authorize");
 const { checkUser } = require("../middlewares/authorize");
-
+const bcrypt = require("bcrypt")
 
 users.get("/data/seed", async (req, res) => {
     await User.insertMany(userSeedData)
@@ -30,7 +30,6 @@ users.post('/login', async (req, res) =>{
         console.log('invalid password')
     }
 })
-
 
 //Sign Up Form
 users.get('/signup', (req, res) => {
