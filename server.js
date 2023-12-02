@@ -25,6 +25,7 @@ app.use(bodyParser.json())
 //app.use('/api/signup', require('./controllers/users')){
 
 app.use('/api/signup', async (req, res) => {
+  console.log('signup api running')
   console.log(req.body)
   res.json({status: 'ok'})
 })
