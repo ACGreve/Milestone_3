@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from "react"
-// import { useCookies } from "react-cookie"
+import { useCookies } from "react-cookie"
 // import { Link } from "react-router-dom"
-//import { Link, useNavigate } from "react-router-dom"
-// import { ToastContainer, toast } from "react-toastify"
+import { Link, useNavigate } from "react-router-dom"
+import { ToastContainer, toast } from "react-toastify"
 // const React = require("react")
 const Default = require("../default")
 
 function login() {
 
-//module.exports.login = async (req, res) => {
-  // const [cookies] = useCookies([])
-  // //const navigate = useNavigate();
-  // //const history = useHistory();
+  // const [cookies] = useCookies([]);
+  // const navigate = useNavigate();
   // useEffect(() => {
   //   if (cookies.jwt) {
-  //     //history.push("/");
-  //     window.location.href = "/";
-  //   } 
-  // }, );   //[cookies, history]);
+  //     navigate("/");
+  //   }
+  // }, [cookies, navigate]);
 
   const [values, setValues] = useState({ name: "", password: "" })
   // const generateError = (error) =>
@@ -47,7 +44,6 @@ function login() {
       console.log(ex);
     }
   }
-  
   return (
     <div>
       <Default>

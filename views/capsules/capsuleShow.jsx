@@ -11,7 +11,7 @@ function show(data) {
           <div className="row flex-column flex-md-row">
             <div className="col-md-4 p">
               <img
-                src={data.capsule.image}
+                src={data.capsule.capsuleImage}
                 alt={data.capsule.name}
                 className="img-fluid"
               />
@@ -70,6 +70,17 @@ function show(data) {
                   </form>
                 </div>
               )}
+            </div>
+            <div className="row flex-column flex-md-row">
+            <div className="col-md-4 p" id="display_image">
+              
+              <img
+                src={data.capsule.image}
+                alt={data.capsule.name}
+                className="img-fluid"
+                id="image_input"
+              />
+            </div>
             </div>
           </div>
         </main>

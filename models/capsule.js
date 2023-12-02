@@ -5,12 +5,14 @@ const capsuleSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    capsuleImage:{
+        type: String
+    },
     image:{
         type: String
     },
     status: { 
         type: String, 
-        default: 'draft' 
     }, // 'draft' or 'locked'
     lockedBy: { 
         type: String, 

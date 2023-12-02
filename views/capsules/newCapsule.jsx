@@ -4,14 +4,21 @@ const Def = require("../default");
 function NewForm() {
   const [status, setStatus] = useState('');
 
+  const handleSubmit = (e) => {
+    console.log("Form submitted")
+    e.preventDefault();
+  }
+  
   const handleDraft = () => {
     setStatus("draft");
     console.log({status})
+    console.log('hi')
   };
 
   const handleLock = () => {
     setStatus("locked");
     console.log("Status set to locked:", status);
+    console.log('bye')
   };
 
   return (
@@ -19,7 +26,7 @@ function NewForm() {
       <body className="new">
         <main>
           <h1>Add a New Capsule</h1>
-          <form method="POST" action="/capsules">
+          <form method="POST" action="/capsules" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Capsule Name</label>
               <input
@@ -28,6 +35,11 @@ function NewForm() {
                 name="name"
                 required
               />
+            </div>
+            <div className="form-group">
+              <label htmlFor="capsuleImage">Capsule Lock Image</label>
+              <input className="form-control" id="capsuleImage" name="capsuleImage" />
+              <p>leave blank if no image is found</p>
             </div>
             <div className="form-group">
               <label htmlFor="date">Encapsulation Date</label>
@@ -39,27 +51,29 @@ function NewForm() {
             </div>
             <div className="form-group">
               <label htmlFor="image">Image</label>
-              <input className="form-control" id="image" name="image" />
+              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg"/>
+              <p>To add multiple images hold CTRL when selecting.</p>
               <p>leave blank if no image is found</p>
             </div>
             <div className="radio-buttons">
-              <label className="radio-label">
+              {/* <label className="radio-label">
                 <input
                   type="radio"
-                  name="statusRadio"
-                  onChange={handleDraft}
+                  name="status"
+                  // onClick={handleDraft}
                   checked={status === "draft"} // Ensures button is checked when status is "draft"
                 />
                 <span className="btn btn-primary">Save as Draft</span>
-              </label>
+              </label> */}
               <label className="radio-label">
                 <input
                   type="radio"
-                  name="statusRadio"
-                  onChange={handleLock}
-                  checked={status === "locked"} // Ensures button is checked when status is "locked"
+                  name="status"
+                  onClick={()=>handleLock()}
+                  // checked={status === "locked"} // Ensures button is checked when status is "locked"
                 />
-                <span className="btn btn-primary">Lock Capsule</span>
+                <span className="btn btn-primary">Lock Capsule</span><br/>
+                <p>Check box to lock, if left unchecked your progress will be saved to drafts.</p>
               </label>
             </div>
             <p>Once the capsule is locked, no modification can be done.</p>

@@ -17,10 +17,11 @@ const userSchema = new mongoose.Schema({
 userSchema.pre("save", async function(next) {
   try {
     const salt = await bcrypt.genSalt();
-    this.password = await bcrypt.hash(this.password, salt);
-    next();
+    this.password = await bcrypt.hash(this.password, salt)
+    console.log('password hashed')
+    next()
   } catch (error) {
-    next(error);
+    next(error)
   }
 });
 
@@ -29,7 +30,8 @@ userSchema.statics.login = async function (username, password) {
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
     if (auth) {
-      return user;
+      console.log('logged in')
+      return user
     }
     throw Error("incorrect password");
   }
