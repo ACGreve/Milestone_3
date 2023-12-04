@@ -76,7 +76,7 @@ function show(data) {
             <div className="col-md-4 p" id="display_image">
               
               <img
-                src={data.capsule.image}
+                src={`http://localhost:5001/uploads/${data.capsule.image}`}
                 alt={data.capsule.name}
                 className="img-fluid"
                 id="image_input"
