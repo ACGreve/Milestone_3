@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
-import { useCookies } from "react-cookie"
+// import { useCookies } from "react-cookie"
 // import { Link } from "react-router-dom"
-import { Link, useNavigate } from "react-router-dom"
-import { ToastContainer, toast } from "react-toastify"
+// import { Link, useNavigate } from "react-router-dom"
+// import { ToastContainer, toast } from "react-toastify"
 // const React = require("react")
 const Default = require("../default")
 
-function login() {
+function loginForm() {
 
   // const [cookies] = useCookies([]);
   // const navigate = useNavigate();
@@ -89,7 +89,7 @@ function login() {
   )
 }
 
-module.exports = login
+module.exports = loginForm
 
 // /*import React, { useState, useEffect } from "react"
 // import { useCookies } from "react-cookie"
