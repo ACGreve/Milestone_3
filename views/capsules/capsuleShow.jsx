@@ -1,8 +1,11 @@
 const React = require("react")
 const Default = require("../default")
+import { useEffect, useState } from 'react'
+
+
 
 function show(data) {
-  const isLocked = data.capsule.status === 'locked'; // Check if the capsule is locked
+  
 
   return (
     <Default title={data.capsule.name}>
@@ -23,7 +26,7 @@ function show(data) {
               <p>Note to Future Self: </p>
               <h3 className="white"> {data.capsule.note}</h3>
               <br />
-              {isLocked ? (
+              {data.capsule.isLocked ? (
                 <div className="locked-warning">
                   <p>This capsule is locked. Editing and deletion are disabled.</p>
                 </div>
