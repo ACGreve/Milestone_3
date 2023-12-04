@@ -45,7 +45,7 @@ body img {
 
 /* home view */
 body.home {
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_1280.jpg);
+  background-image: url(/images/pocket-watch-3156771_1280.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -148,7 +148,8 @@ body.show .img-fluid {
 }
 body.show .col-md-4 img {
   height: 70vh !important;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body.show .col-md-8 {
   margin: 0 auto;
@@ -208,7 +209,8 @@ body.show .row {
   body.show img {
     height: 70vh !important;
     width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body.show .col-md-4,
   body.show .col-md-8 {
@@ -223,7 +225,8 @@ body.show .row {
 @media (max-width: 992px) {
   body.show .col-md-4 img {
     height: 60vh !important;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -238,7 +241,8 @@ body.show .row {
   }
   body.show .col-md-4 img {
     height: 50vh !important;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body.show .show-row {
     text-align: center;
@@ -340,7 +344,6 @@ body.error404 h1 {
   padding-bottom: 15px;
   text-align: left;
 }
-
 .navbar .navbar-nav {
   margin-left: 1.2em;
   margin-right: auto;
@@ -506,21 +509,3 @@ a:active {
     font-size: 0.7rem;
   }
 }/*# sourceMappingURL=main.css.map */
-
-/*input[type="radio"] {
-  display: none;
-} */
-
-input[type="radio"]:focus {
-  background-color: #80bdff !important;
-}
-
-textarea.tall {
-  min-height: 100px; /* Set an initial height */
-  resize: vertical; /* Allow vertical resizing */
-}
-
-h3{
-  font-size: 1em !important;
-  color: white;
-}

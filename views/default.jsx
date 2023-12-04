@@ -88,7 +88,7 @@ function Default(props) {
                 GitHub
               </a>
               <a
-                href="https://mike-weisphal-portfolio.onrender.com/"
+                href="#"
                 target="_blank"
                 style={{ marginLeft: "20px" }}
               >
