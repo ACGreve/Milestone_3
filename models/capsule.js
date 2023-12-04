@@ -28,12 +28,15 @@ const capsuleSchema = new mongoose.Schema({
 })
 
 capsuleSchema.virtual('unlockDate').get(function(){
-    const unlockDate = new Date(this.submissionDate)
-    
+    const unlockDate = new Date(this.subDate)
+    unlockDate.setFullYear(unlockDate.getFullYear()+2)
+    console.log(unlockDate)
+    return unlockDate
 })
 
-
-
+capsuleSchema.virtual('isLocked').get(function () {
+    return this.unlockDate > new Date();
+})
 
 
 module.exports = mongoose.model('Capsule', capsuleSchema)
