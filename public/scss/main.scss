@@ -43,7 +43,7 @@ body {
     font-size: 0.7em !important;
     line-height: 1em;
     text-shadow: 0 0 0.3rem $black;
-  }
+  }   
 
   img {
     margin: auto;
@@ -113,6 +113,11 @@ body.capsules {
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center !important;
+
+    @media (max-width: 567px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
 
   .col-sm-6 img,
@@ -371,6 +376,16 @@ body.error404 {
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
+  background: linear-gradient(
+    to bottom,
+    $drab-dark-brown,
+    $drab-dark-brown 90%,
+    rgba($drab-dark-brown, 0)
+  );
+
+  @media (max-width: 768px) {
+    font-size: 0.9em;  // Adjust this value as needed
+  }
 
   .navbar-nav {
     margin-left: 1.2em;
@@ -514,9 +529,9 @@ a {
   line-height: 1em !important;
   background: linear-gradient(
     to top,
-    $footer-color,
-    $footer-color 90%,
-    rgba($footer-color, 0)
+    $drab-dark-brown,
+    $drab-dark-brown 90%,
+    rgba($drab-dark-brown, 0)
   );
   color: $baby-blue !important;
   font-family: $font-stack;
