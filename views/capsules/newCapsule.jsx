@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 const Def = require("../default");
 
 function NewForm() {
   const [status, setStatus] = useState('');
+
 
   const handleSubmit = (e) => {
     console.log("Form submitted")
