@@ -35,7 +35,7 @@ capsuleSchema.virtual('unlockDate').get(function(){
 })
 
 capsuleSchema.virtual('isLocked').get(function () {
-    return this.unlockDate > new Date() 
+    return this.unlockDate > new Date() && this.status === 'on'
 })
 
 
