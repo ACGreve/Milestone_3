@@ -29,7 +29,6 @@ function index(data) {
           <div className="row show-row">
             <h2>Open Capsules</h2>
             {capsulesFormatted}
-            <h2>Locked Capsules</h2>
           </div>
           <a href="/capsules/new">
             <button className="btn btn-primary">Add a New capsule</button>
