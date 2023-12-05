@@ -18,23 +18,23 @@ function edit_form(data) {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="date">Date </label>
-              <input
-                className="form-control"
-                id="date"
-                type="text"
-                name="date"
-                defaultValue={data.capsule.date}
+              <label htmlFor="capsuleImage">Capsule Lock Image</label>
+              <input 
+              className="form-control" 
+              id="capsuleImage" 
+              name="capsuleImage" 
+              defaultValue={data.capsule.capsuleImage}
               />
+              <p>leave blank if no image is found</p>
             </div>
             <div className="form-group">
-              <label htmlFor="place">Place</label>
-              <input
-                className="form-control"
-                id="place"
+              <label htmlFor="note">Note to Future Self</label>
+              <textarea
+                className="form-control tall"
+                id="note"
                 type="text"
-                name="place"
-                defaultValue={data.capsule.place}
+                name="note"
+                defaultValue={data.capsule.note}
               />
             </div>
             <div className="form-group">
@@ -46,6 +46,17 @@ function edit_form(data) {
                 name="image"
                 defaultValue={data.capsule.image}
               />
+            </div>
+            <div className="radio-buttons">
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="status"
+                  // onClick={()=>handleLock()}
+                />
+                <span className="btn btn-primary">Lock Capsule</span><br/>
+                <p>Check box to lock</p>
+              </label>
             </div>
             <input
               className="btn btn-primary"

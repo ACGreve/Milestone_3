@@ -16,16 +16,17 @@ body {
   text-align: center;
   font-weight: bold;
   color: $baby-blue;
-  text-shadow: 0 0 0.2rem $white;
   background-color: $black;
 
   h1 {
+    font-size: 6em !important;
     text-align: center;
     color: $baby-blue;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $black;
   }
 
   h2 {
+    font-size: 3.5em !important;
     color: $baby-blue !important;
   }
 
@@ -42,8 +43,8 @@ body {
     letter-spacing: 0.03em;
     font-size: 0.7em !important;
     line-height: 1em;
-    text-shadow: 0 0 0.3rem $black;
-  }
+    
+  }   
 
   img {
     margin: auto;
@@ -66,14 +67,13 @@ body.home {
 
   h1 {
     color: $yale-blue;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $baby-blue;
     margin-top: 0.5em;
   }
 
   h2 {
     color: $yale-blue !important;
-    text-shadow: 0 0 0.3rem $black;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $baby-blue;
   }
 }
 
@@ -83,20 +83,17 @@ body.capsules {
 
   h1 {
     color: $baby-blue;
-    text-shadow: 0 0 0.3rem $black;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $black;
   }
 
   h2 {
     font-size: 1.1em;
     color: $baby-blue !important;
-    text-shadow: 0 0 0.3rem $black;
   }
 
   p {
     font-size: 0.8em !important;
     color: $baby-blue !important;
-    text-shadow: 0 0 0.3rem $black;
   }
 
   a img {
@@ -113,6 +110,11 @@ body.capsules {
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center !important;
+
+    @media (max-width: 567px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
 
   .col-sm-6 img,
@@ -138,14 +140,13 @@ body.show {
   @include scrolling-background-properties($show-background);
 
   h1 {
-    color: $baby-blue;
-    -webkit-text-stroke: 1px $white;
+    color: $yale-blue;
+    -webkit-text-stroke: 1px $baby-blue;
   }
 
   p {
     font-size: 0.7em !important;
-    color: $baby-blue !important;
-    text-shadow: 0 0 0.3rem $black;
+    color: $yale-blue !important;
   }
 
   .img-fluid {
@@ -311,7 +312,6 @@ body {
   &.edit label {
     font-size: 1em !important;
     color: $baby-blue !important;
-    text-shadow: 0 0 0.3rem $black;
   }
 }
 
@@ -347,7 +347,7 @@ body.error404 {
 
   h1 {
     color: $baby-blue;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $black;
     font-size: 2.5em !important;
     margin-top: -0.9em;
 
@@ -367,10 +367,15 @@ body.error404 {
   left: 0;
   width: 100%;
   z-index: 1;
-  height: 4em !important;
+  height: 3em !important;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
+  background: $yale-blue;
+
+  @media (max-width: 768px) {
+    font-size: 0.9em;  // Adjust this value as needed
+  }
 
   .navbar-nav {
     margin-left: 1.2em;
@@ -510,14 +515,9 @@ a {
   align-items: center;
   padding-top: 22px;
   width: 100%;
-  height: 5em;
+  height: 4em;
   line-height: 1em !important;
-  background: linear-gradient(
-    to top,
-    $footer-color,
-    $footer-color 90%,
-    rgba($footer-color, 0)
-  );
+  background: $yale-blue;
   color: $baby-blue !important;
   font-family: $font-stack;
 
@@ -557,4 +557,12 @@ a {
       font-size: 0.7rem;
     }
   }
+}
+
+.thumbnail {
+  height: auto;
+  cursor: pointer;
+  width: 150px;  /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  object-fit: cover;
 }

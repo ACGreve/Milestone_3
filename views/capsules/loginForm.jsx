@@ -1,26 +1,24 @@
-const React = require("react")
+import React, { useState, useEffect } from "react"
+// import { useCookies } from "react-cookie"
+// import { Link } from "react-router-dom"
+// import { Link, useNavigate } from "react-router-dom"
+// import { ToastContainer, toast } from "react-toastify"
+// const React = require("react")
 const Default = require("../default")
-import { useState } from "react"
 
-function login() {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-
+function loginForm() {
   return (
     <div>
       <Default>
         <main>
           <h1>Login</h1>
-
-          <form onSubmit={""}>
+          <form method="POST">
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>
                 <input
                   type="username"
                   required
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
                   className="form-control"
                   id="username"
                   name="username"
@@ -31,14 +29,15 @@ function login() {
                 <input
                   type="password"
                   required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
                   className="form-control"
                   id="password"
                   name="password"
                 />
               </div>
             </div>
+            <p>
+              Don't have an account? Sign up <a href="/users/signup">here</a>
+            </p>
             <input className="btn btn-primary" type="submit" value="Login" />
           </form>
         </main>
@@ -47,4 +46,5 @@ function login() {
   )
 }
 
-module.exports = login
+module.exports = loginForm
+

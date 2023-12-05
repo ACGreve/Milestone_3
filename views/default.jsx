@@ -1,11 +1,12 @@
 const React = require("react")
+import Navigation from './navigation'
 
 function Default(props) {
   return (
     <html>
       <head>
         <title>{props.title}</title>
-        <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <link rel="icon" type="image/png" href="/images/apple-touch-icon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
           rel="stylesheet"
@@ -19,35 +20,7 @@ function Default(props) {
         <link rel="stylesheet" href="/css/main.css" />
       </head>
       <body>
-        <nav className="navbar navbar-expand">
-          <ul className="navbar-nav mr-auto mt-0">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">
-                Home
-              </a>
-            </li>{" "}
-            <li className="nav-item">
-              <a className="nav-link" href="/capsules">
-                Your Capsules
-              </a>
-            </li>{" "}
-            <li className="nav-item">
-              <a className="nav-link" href="/capsules/new">
-                Add New Capsule
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/capsules/login">
-                Login
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/capsules/signup">
-                Sign Up
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Navigation/>
         <div>{props.children}</div>
         <footer className="sticky-footer">
           <div className="container">
@@ -88,7 +61,7 @@ function Default(props) {
                 GitHub
               </a>
               <a
-                href="https://mike-weisphal-portfolio.onrender.com/"
+                href="#"
                 target="_blank"
                 style={{ marginLeft: "20px" }}
               >
