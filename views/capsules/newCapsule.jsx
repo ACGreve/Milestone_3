@@ -24,7 +24,7 @@ function NewForm() {
 
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = ['/images/brown_time_capsule.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
+  const images = ['/images/white_time_capsule.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
 
   const handleImageSelection = (image) => {
     setSelectedImage(image);
@@ -70,10 +70,6 @@ function NewForm() {
         ))}
       </div>
             </div>
-            {/* <div className="form-group">
-              <label htmlFor="date">Encapsulation Date</label>
-              <input className="form-control" id="date" name="date" />
-            </div> */}
             <div className="form-group">
               <label htmlFor="note">Note to Future Self</label>
               <textarea
@@ -85,26 +81,16 @@ function NewForm() {
             </div>
             <div className="form-group">
               <label htmlFor="image">Image</label>
-              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg"/>
+              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg" multiple/>
               <p>To add multiple images hold CTRL when selecting.</p>
               <p>leave blank if no image is found</p>
             </div>
             <div className="radio-buttons">
-              {/* <label className="radio-label">
-                <input
-                  type="radio"
-                  name="status"
-                  // onClick={handleDraft}
-                  checked={status === "draft"} // Ensures button is checked when status is "draft"
-                />
-                <span className="btn btn-primary">Save as Draft</span>
-              </label> */}
               <label className="radio-label">
                 <input
                   type="radio"
                   name="status"
                   onClick={()=>handleLock()}
-                  // checked={status === "locked"} // Ensures button is checked when status is "locked"
                 />
                 <span className="btn btn-primary">Lock Capsule</span><br/>
                 <p>Check box to lock</p>

@@ -14,15 +14,12 @@ function loginForm() {
         <main>
           <h1>Login</h1>
           <form method="POST">
-          {/* <form onSubmit={(e) => handleSubmit(e)}> */}
             <div className="row">
               <div className="col-sm-6 form-group">
                 <label htmlFor="username">Username</label>
                 <input
                   type="username"
                   required
-                  // value={username}
-                  // onChange={(e) => setUsername(e.target.value)}
                   className="form-control"
                   id="username"
                   name="username"
@@ -33,8 +30,6 @@ function loginForm() {
                 <input
                   type="password"
                   required
-                  //value={password}
-                  //onChange={(e) => setPassword(e.target.value)}
                   className="form-control"
                   id="password"
                   name="password"
@@ -46,7 +41,6 @@ function loginForm() {
             </p>
             <input className="btn btn-primary" type="submit" value="Login" />
           </form>
-          {/* <ToastContainer /> */}
         </main>
         </body>
       </Default>
@@ -55,3 +49,4 @@ function loginForm() {
 }
 
 module.exports = loginForm
+
