@@ -1,4 +1,5 @@
 const React = require("react")
+import Navigation from './navigation'
 
 function Default(props) {
   return (
@@ -19,35 +20,7 @@ function Default(props) {
         <link rel="stylesheet" href="/css/main.css" />
       </head>
       <body>
-        <nav className="navbar navbar-expand">
-          <ul className="navbar-nav mr-auto mt-0">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">
-                Home
-              </a>
-            </li>{" "}
-            <li className="nav-item">
-              <a className="nav-link" href="/capsules">
-                Your Capsules
-              </a>
-            </li>{" "}
-            <li className="nav-item">
-              <a className="nav-link" href="/capsules/new">
-                Add New Capsule
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/users/login">
-                Login
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/users/signup">
-                Sign Up
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <Navigation/>
         <div>{props.children}</div>
         <footer className="sticky-footer">
           <div className="container">

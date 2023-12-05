@@ -1,9 +1,10 @@
 const React = require("react")
 const Default = require("../default")
+import { useEffect, useState } from 'react'
+
+
 
 function show(data) {
-  const isLocked = data.capsule.status === 'locked'; // Check if the capsule is locked
-
   return (
     <Default title={data.capsule.name}>
       <body className="show">
@@ -19,11 +20,11 @@ function show(data) {
             <div className="col-md-8">
               <h1>{data.capsule.name}</h1>
               <br />
-              <p>Date: {data.capsule.date}</p>
+              <p>Date Locked: {data.capsule.subDate.toLocaleString()}</p>
               <p>Note to Future Self: </p>
               <h3 className="white"> {data.capsule.note}</h3>
               <br />
-              {isLocked ? (
+              {data.capsule.isLocked ? (
                 <div className="locked-warning">
                   <p>This capsule is locked. Editing and deletion are disabled.</p>
                 </div>
@@ -73,14 +74,13 @@ function show(data) {
               )}
             </div>
             <div className="row flex-column flex-md-row">
-            <div className="col-md-4 p" id="display_image">
-              
-              <img
-                src={data.capsule.image}
+            <div className="col-md-4 p" id="display_image"> 
+              {/*<img
+                src={`http://localhost:5001/uploads/${data.capsule.image}`}
                 alt={data.capsule.name}
                 className="img-fluid"
                 id="image_input"
-              />
+              />*/}
             </div>
             </div>
           </div>

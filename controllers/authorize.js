@@ -62,6 +62,9 @@ const handleErrors = (err) => {
       const user = await User.login(name, password);
       const token = createToken(user._id);
       res.cookie("jwt", token, { httpOnly: false, maxAge: maxAge * 1000 });
+      const data = await response.json();
+        localStorage.setItem('jwt', data.token); // Store token in localStorage
+        console.log('Login success');
       res.status(200).json({ user: user._id, status: true });
     } catch (err) {
       const errors = handleErrors(err);

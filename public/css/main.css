@@ -515,3 +515,32 @@ a:active {
     font-size: 0.7rem;
   }
 }/*# sourceMappingURL=main.css.map */
+
+/*input[type="radio"] {
+  display: none;
+} */
+
+input[type="radio"]:focus {
+  background-color: #80bdff !important;
+}
+
+textarea.tall {
+  min-height: 100px; /* Set an initial height */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+h3{
+  font-size: 1em !important;
+  color: white;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-item {
+  flex: 0 0 calc(32%); 
+  position: relative;
+}
