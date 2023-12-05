@@ -24,7 +24,7 @@ function NewForm() {
 
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = ['/images/dark_blue_hourglass.png', '/images/light_blue_hourglass.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
+  const images = ['/images/white_time_capsule.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
 
   const handleImageSelection = (image) => {
     setSelectedImage(image);
@@ -51,29 +51,24 @@ function NewForm() {
               <div className="image-list">
         {images.map((image, index) => (
           <div key={index} className="image-item">
-            <img
-              src={image}
-              alt={`Image ${index + 1}`}
-              className={selectedImage === image ? 'selected' : ''}
-              onClick={() => handleImageSelection(image)}
-            />
-            <label>
-              <input
-                type="radio"
-                name="defaultImage"
-                value={image}
-                checked={selectedImage === image}
-                onChange={() => handleImageSelection(image)}
-              />
-              Select
-            </label>
+            <label htmlFor={`image${index}`}>
+                    <input
+                      type="radio"
+                      name="capsuleImage"
+                      value={image}
+                      id={`image${index}`}
+                      checked={selectedImage === image}
+                      onChange={() => handleImageSelection(image)}
+                    />
+                    <img
+                      src={image}
+                      alt={`Image ${index + 1}`}
+                      className="thumbnail"
+                    />
+                  </label>
           </div>
         ))}
       </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="date">Encapsulation Date</label>
-              <input className="form-control" id="date" name="date" />
             </div>
             <div className="form-group">
               <label htmlFor="note">Note to Future Self</label>
@@ -86,32 +81,22 @@ function NewForm() {
             </div>
             <div className="form-group">
               <label htmlFor="image">Image</label>
-              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg"/>
+              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg" multiple/>
               <p>To add multiple images hold CTRL when selecting.</p>
               <p>leave blank if no image is found</p>
             </div>
             <div className="radio-buttons">
-              {/* <label className="radio-label">
-                <input
-                  type="radio"
-                  name="status"
-                  // onClick={handleDraft}
-                  checked={status === "draft"} // Ensures button is checked when status is "draft"
-                />
-                <span className="btn btn-primary">Save as Draft</span>
-              </label> */}
               <label className="radio-label">
                 <input
                   type="radio"
                   name="status"
                   onClick={()=>handleLock()}
-                  // checked={status === "locked"} // Ensures button is checked when status is "locked"
                 />
                 <span className="btn btn-primary">Lock Capsule</span><br/>
-                <p>Check box to lock, if left unchecked your progress will be saved to drafts.</p>
+                <p>Check box to lock</p>
               </label>
             </div>
-            <p>Once the capsule is locked, no modification can be done.</p>
+            <p>Once the capsule is locked, no modifications can be done. Capsule will unlock in 2 years</p>
             <input type="submit" className="btn btn-primary" value="Submit" />
           </form>
         </main>
