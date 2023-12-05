@@ -61,13 +61,13 @@ body.home {
   background-color: #000;
 }
 body.home h1 {
-  color: #9dd1f1;
-  -webkit-text-stroke: 1px #000;
+  color: #083d77;
+  -webkit-text-stroke: 1px #9dd1f1;
   margin-top: 0.5em;
 }
 body.home h2 {
-  color: #9dd1f1 !important;
-  -webkit-text-stroke: 1px #000;
+  color: #083d77 !important;
+  -webkit-text-stroke: 1px #9dd1f1;
 }
 
 /* capsules view */
@@ -137,7 +137,7 @@ body.show {
 }
 body.show h1 {
   color: #083d77;
-  -webkit-text-stroke: 1px #000;
+  -webkit-text-stroke: 1px #9dd1f1;
 }
 body.show p {
   font-size: 0.7em !important;
@@ -270,7 +270,7 @@ body.show .row {
 
 /* new and edit views */
 body.edit {
-  background-image: url(/images/pocket-watch-3156771_1280.jpg);
+  background-image: url(/images/wallpaper-7042708_1280.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -278,7 +278,7 @@ body.edit {
   overflow: hidden;
 }
 body.new {
-  background-image: url(/images/pocket-watch-3156771_1280.jpg);
+  background-image: url(/images/wallpaper-7042708_1280.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -339,11 +339,11 @@ body.error404 h1 {
   left: 0;
   width: 100%;
   z-index: 1;
-  height: 4em !important;
+  height: 3em !important;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
-  background: #494331;
+  background: #083d77;
 }
 @media (max-width: 768px) {
   .navbar {
@@ -474,9 +474,9 @@ a:active {
   align-items: center;
   padding-top: 22px;
   width: 100%;
-  height: 5em;
+  height: 4em;
   line-height: 1em !important;
-  background: #494331;
+  background: #083d77;
   color: #9dd1f1 !important;
   font-family: "Lato", sans-serif;
 }

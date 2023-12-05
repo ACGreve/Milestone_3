@@ -66,14 +66,14 @@ body.home {
   background-color: $black;
 
   h1 {
-    color: $baby-blue;
-    -webkit-text-stroke: 1px $black;
+    color: $yale-blue;
+    -webkit-text-stroke: 1px $baby-blue;
     margin-top: 0.5em;
   }
 
   h2 {
-    color: $baby-blue !important;
-    -webkit-text-stroke: 1px $black;
+    color: $yale-blue !important;
+    -webkit-text-stroke: 1px $baby-blue;
   }
 }
 
@@ -141,7 +141,7 @@ body.show {
 
   h1 {
     color: $yale-blue;
-    -webkit-text-stroke: 1px $black;
+    -webkit-text-stroke: 1px $baby-blue;
   }
 
   p {
@@ -367,11 +367,11 @@ body.error404 {
   left: 0;
   width: 100%;
   z-index: 1;
-  height: 4em !important;
+  height: 3em !important;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
-  background: $drab-dark-brown;
+  background: $yale-blue;
 
   @media (max-width: 768px) {
     font-size: 0.9em;  // Adjust this value as needed
@@ -515,9 +515,9 @@ a {
   align-items: center;
   padding-top: 22px;
   width: 100%;
-  height: 5em;
+  height: 4em;
   line-height: 1em !important;
-  background: $drab-dark-brown;
+  background: $yale-blue;
   color: $baby-blue !important;
   font-family: $font-stack;
 
