@@ -24,7 +24,7 @@ function NewForm() {
 
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = ['/images/dark_blue_hourglass.png', '/images/light_blue_hourglass.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
+  const images = ['/images/brown_time_capsule.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
 
   const handleImageSelection = (image) => {
     setSelectedImage(image);

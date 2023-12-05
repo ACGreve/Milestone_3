@@ -532,7 +532,7 @@ h3{
 }
 
 .image-item {
-  flex: 0 0 calc(25% - 10px); /* Adjust the width based on your layout needs */
+  flex: 0 0 calc(32%); 
   position: relative;
 }
 
