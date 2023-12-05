@@ -42,10 +42,10 @@ function NewForm() {
               <input className="form-control" id="capsuleImage" name="capsuleImage" />
               <p>leave blank if no image is found</p>
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="date">Encapsulation Date</label>
               <input className="form-control" id="date" name="date" />
-            </div>
+            </div> */}
             <div className="form-group">
               <label htmlFor="note">Note to Future Self</label>
               <textarea
@@ -79,10 +79,10 @@ function NewForm() {
                   // checked={status === "locked"} // Ensures button is checked when status is "locked"
                 />
                 <span className="btn btn-primary">Lock Capsule</span><br/>
-                <p>Check box to lock, if left unchecked your progress will be saved to drafts.</p>
+                <p>Check box to lock</p>
               </label>
             </div>
-            <p>Once the capsule is locked, no modification can be done.</p>
+            <p>Once the capsule is locked, no modifications can be done. Capsule will unlock in 2 years</p>
             <input type="submit" className="btn btn-primary" value="Submit" />
           </form>
         </main>

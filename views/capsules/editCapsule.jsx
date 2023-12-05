@@ -27,16 +27,16 @@ function edit_form(data) {
               />
               <p>leave blank if no image is found</p>
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="date">Encapsulation Date </label>
               <input
                 className="form-control"
                 id="date"
                 type="text"
-                name="date"
-                defaultValue={data.capsule.date}
+                name="subDate"
+                defaultValue={data.capsule.subDate}
               />
-            </div>
+            </div> */}
             <div className="form-group">
               <label htmlFor="note">Note to Future Self</label>
               <textarea

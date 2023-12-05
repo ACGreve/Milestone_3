@@ -5,6 +5,8 @@ const { signup, login } = require("../controllers/authorize");
 const { checkUser } = require("../middlewares/authorize");
 const bcrypt = require("bcrypt")
 
+
+
 users.get("/data/seed", async (req, res) => {
     await User.insertMany(userSeedData)
     res.redirect('/')

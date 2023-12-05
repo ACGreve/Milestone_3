@@ -7,43 +7,6 @@ import React, { useState, useEffect } from "react"
 const Default = require("../default")
 
 function loginForm() {
-
-  // const [cookies] = useCookies([]);
-  // const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (cookies.jwt) {
-  //     navigate("/");
-  //   }
-  // }, [cookies, navigate]);
-
-  const [values, setValues] = useState({ name: "", password: "" })
-  // const generateError = (error) =>
-  //   toast.error(error, {
-  //     position: "bottom-right",
-  //   });
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const { data } = await axios.post(
-        "http://localhost:5001/users/login",
-        {
-          ...values,
-        },
-        { withCredentials: true }
-      );
-      if (data) {
-        if (data.errors) {
-          const { username, password } = data.errors;
-          if (username) generateError(username);
-          else if (password) generateError(password);
-        } else {
-          window.location.href = "/";
-        }
-      }
-    } catch (ex) {
-      console.log(ex);
-    }
-  }
   return (
     <div>
       <Default>
