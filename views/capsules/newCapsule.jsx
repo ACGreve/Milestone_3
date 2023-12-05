@@ -24,7 +24,7 @@ function NewForm() {
 
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = ['/images/brown_time_capsule.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
+  const images = ['/images/white_time_capsule.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
 
   const handleImageSelection = (image) => {
     setSelectedImage(image);
@@ -81,7 +81,7 @@ function NewForm() {
             </div>
             <div className="form-group">
               <label htmlFor="image">Image</label>
-              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg"/>
+              <input type="file" className="form-control" id="image" name="image" accept="image/png, image/jpg" multiple/>
               <p>To add multiple images hold CTRL when selecting.</p>
               <p>leave blank if no image is found</p>
             </div>
