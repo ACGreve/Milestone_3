@@ -23,6 +23,7 @@ This Time Capsule application is user-friendly and visually appealing approach t
   - React
   - Express
   - MongoDb
+  - Render
 
 
 ## Database Configuration:
@@ -57,7 +58,8 @@ Connection string: MONGO_URI=mongodb+srv://milestone3:milestone3@cluster0.xmgpmz
 |:----------|:--------------|
 | _id | Object ID |
 | name | STRING |
-| capsuleimage | STRING |
+| image | STRING |
+| status | STRING |
 | note | TEXT |
 | lockedBy | STRING	|
 | subdate | DATE |
@@ -67,11 +69,8 @@ Connection string: MONGO_URI=mongodb+srv://milestone3:milestone3@cluster0.xmgpmz
 | Field | Type |
 |:--------------|:---------------
 | _id | Object ID |
-| name | STRING	|
+| username | STRING	|
 | password | STRING
-| city | STRING	|
-| state | STRING |
-| organization | STRING |	
 
 
 # References/Resources:
@@ -79,7 +78,8 @@ Connection string: MONGO_URI=mongodb+srv://milestone3:milestone3@cluster0.xmgpmz
 - [Stackoverflow](https://stackoverflow.com)
 - [ChatGPT](https://openai.com/chatgpt)
 - [GitHub CoPilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
-- [Sass:Syntactically Awesome Style Sheets](https://sass-lang.com/)
-- [Amazon Web Services](https://us-east-2.console.aws.amazon.com/console/home?region=us-east-2)
+- [Sass:Syntactically Awesome Style Sheets](https://sass-lang.com/
 - [Git_Version_Control_Notes/14_Markdown_Tutorial](https://github.com/CodyNicholson/Git_Version_Control_Notes/blob/master/14_Markdown_Tutorial.md)
 - Node.js Register and Login Tutorial | Work with MongoDB, JWT and Node: https://www.youtube.com/watch?v=b91XgdyX-SM3
+
+
