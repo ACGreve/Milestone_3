@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react'
 
 
 function show(data) {
-  
-
   return (
     <Default title={data.capsule.name}>
       <body className="show">
