@@ -10,6 +10,7 @@ function loginForm() {
   return (
     <div>
       <Default>
+        <body className="login">
         <main>
           <h1>Login</h1>
           <form method="POST">
@@ -41,6 +42,7 @@ function loginForm() {
             <input className="btn btn-primary" type="submit" value="Login" />
           </form>
         </main>
+        </body>
       </Default>
     </div>
   )
