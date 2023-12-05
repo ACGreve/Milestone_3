@@ -298,6 +298,12 @@ body.show {
   }
 }
 
+/* login & signup view */
+body.login,
+body.signup {
+  @include overflow-hidden-views($edit-background);
+}
+
 /* new and edit views */
 body {
   &.edit {

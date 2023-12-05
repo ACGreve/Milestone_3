@@ -3,28 +3,11 @@ const Default = require("../default")
 import { useState } from "react"
 
 function Signup() {
-  // const [username, setUsername] = useState("")
-  // const [password, setPassword] = useState("")
-  // const [confirmPassword, setConfirmPassword] = useState("")
-  // const [error, setError] = useState("")
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-
-  //   if (password !== confirmPassword) {
-  //     setError("Passwords do not match")
-  //   } else {
-  //     setError("") // Reset error if passwords match
-  //     // Reset the fields after successful submission
-  //     setUsername("")
-  //     setPassword("")
-  //     setConfirmPassword("")
-  //   }
-  // }
 
   return (
     <div>
       <Default>
+        <body className="signup">
         <main>
           <h1>Sign Up</h1>
           {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
@@ -71,6 +54,7 @@ function Signup() {
             <input className="btn btn-primary" type="submit" value="Sign Up" />
           </form>
         </main>
+        </body>
       </Default>
     </div>
   )
