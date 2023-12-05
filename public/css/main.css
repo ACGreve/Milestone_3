@@ -535,3 +535,14 @@ a:active {
   -o-object-fit: cover;
      object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-item {
+  flex: 0 0 calc(32%); 
+  position: relative;
+}
