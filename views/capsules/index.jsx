@@ -1,6 +1,5 @@
 const React = require("react")
 const Default = require("../default")
-import axios from 'axios'
 
 function index(data) {
   //generates HTML elements for each capsule in the data.capsules array, creating a visual list of capsules with their titles, images, date, place.

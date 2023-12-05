@@ -76,14 +76,13 @@ function show(data) {
               )}
             </div>
             <div className="row flex-column flex-md-row">
-            <div className="col-md-4 p" id="display_image">
-              
-              <img
+            <div className="col-md-4 p" id="display_image"> 
+              {/*<img
                 src={`http://localhost:5001/uploads/${data.capsule.image}`}
                 alt={data.capsule.name}
                 className="img-fluid"
                 id="image_input"
-              />
+              />*/}
             </div>
             </div>
           </div>

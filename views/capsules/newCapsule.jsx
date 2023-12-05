@@ -22,6 +22,15 @@ function NewForm() {
     console.log('bye')
   };
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const images = ['/images/dark_blue_hourglass.png', '/images/light_blue_hourglass.png', '/images/dark_blue_time_capsule.png', '/images/light_blue_time_capsule.png']; 
+
+  const handleImageSelection = (image) => {
+    setSelectedImage(image);
+    // Logic to submit the selected image (e.g., API call, form submission)
+  };
+
   return (
     <Def title="Add a New Capsule">
       <body className="new">
@@ -39,8 +48,28 @@ function NewForm() {
             </div>
             <div className="form-group">
               <label htmlFor="capsuleImage">Capsule Lock Image</label>
-              <input className="form-control" id="capsuleImage" name="capsuleImage" />
-              <p>leave blank if no image is found</p>
+              <div className="image-list">
+        {images.map((image, index) => (
+          <div key={index} className="image-item">
+            <img
+              src={image}
+              alt={`Image ${index + 1}`}
+              className={selectedImage === image ? 'selected' : ''}
+              onClick={() => handleImageSelection(image)}
+            />
+            <label>
+              <input
+                type="radio"
+                name="defaultImage"
+                value={image}
+                checked={selectedImage === image}
+                onChange={() => handleImageSelection(image)}
+              />
+              Select
+            </label>
+          </div>
+        ))}
+      </div>
             </div>
             <div className="form-group">
               <label htmlFor="date">Encapsulation Date</label>

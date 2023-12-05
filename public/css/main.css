@@ -524,3 +524,15 @@ h3{
   font-size: 1em !important;
   color: white;
 }
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-item {
+  flex: 0 0 calc(25% - 10px); /* Adjust the width based on your layout needs */
+  position: relative;
+}
+
