@@ -22,7 +22,7 @@ body {
     font-size: 6em !important;
     text-align: center;
     color: $baby-blue;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $black;
   }
 
   h2 {
@@ -43,7 +43,7 @@ body {
     letter-spacing: 0.03em;
     font-size: 0.7em !important;
     line-height: 1em;
-    // text-shadow: 0 0 0.3rem $black;
+    
   }   
 
   img {
@@ -66,15 +66,14 @@ body.home {
   background-color: $black;
 
   h1 {
-    color: $yale-blue;
-    -webkit-text-stroke: 1px $white;
+    color: $baby-blue;
+    -webkit-text-stroke: 1px $black;
     margin-top: 0.5em;
   }
 
   h2 {
-    color: $yale-blue !important;
-    text-shadow: 0 0 0.3rem $black;
-    -webkit-text-stroke: 1px $white;
+    color: $baby-blue !important;
+    -webkit-text-stroke: 1px $black;
   }
 }
 
@@ -84,20 +83,17 @@ body.capsules {
 
   h1 {
     color: $baby-blue;
-    text-shadow: 0 0 0.3rem $black;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $black;
   }
 
   h2 {
     font-size: 1.1em;
     color: $baby-blue !important;
-    text-shadow: 0 0 0.3rem $black;
   }
 
   p {
     font-size: 0.8em !important;
     color: $baby-blue !important;
-    text-shadow: 0 0 0.3rem $black;
   }
 
   a img {
@@ -144,14 +140,13 @@ body.show {
   @include scrolling-background-properties($show-background);
 
   h1 {
-    color: $baby-blue;
-    -webkit-text-stroke: 1px $white;
+    color: $yale-blue;
+    -webkit-text-stroke: 1px $black;
   }
 
   p {
     font-size: 0.7em !important;
-    color: $baby-blue !important;
-    // text-shadow: 0 0 0.3rem $black;
+    color: $yale-blue !important;
   }
 
   .img-fluid {
@@ -317,7 +312,6 @@ body {
   &.edit label {
     font-size: 1em !important;
     color: $baby-blue !important;
-    text-shadow: 0 0 0.3rem $black;
   }
 }
 
@@ -353,7 +347,7 @@ body.error404 {
 
   h1 {
     color: $baby-blue;
-    -webkit-text-stroke: 1px $white;
+    -webkit-text-stroke: 1px $black;
     font-size: 2.5em !important;
     margin-top: -0.9em;
 

@@ -18,7 +18,7 @@ body h1 {
   font-size: 6em !important;
   text-align: center;
   color: #9dd1f1;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #000;
 }
 body h2 {
   font-size: 3.5em !important;
@@ -61,14 +61,13 @@ body.home {
   background-color: #000;
 }
 body.home h1 {
-  color: #083d77;
-  -webkit-text-stroke: 1px #fff;
+  color: #9dd1f1;
+  -webkit-text-stroke: 1px #000;
   margin-top: 0.5em;
 }
 body.home h2 {
-  color: #083d77 !important;
-  text-shadow: 0 0 0.3rem #000;
-  -webkit-text-stroke: 1px #fff;
+  color: #9dd1f1 !important;
+  -webkit-text-stroke: 1px #000;
 }
 
 /* capsules view */
@@ -81,18 +80,15 @@ body.capsules {
 }
 body.capsules h1 {
   color: #9dd1f1;
-  text-shadow: 0 0 0.3rem #000;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #000;
 }
 body.capsules h2 {
   font-size: 1.1em;
   color: #9dd1f1 !important;
-  text-shadow: 0 0 0.3rem #000;
 }
 body.capsules p {
   font-size: 0.8em !important;
   color: #9dd1f1 !important;
-  text-shadow: 0 0 0.3rem #000;
 }
 body.capsules a img {
   padding-bottom: 7px;
@@ -140,12 +136,12 @@ body.show {
   /* different viewport size adjustments */
 }
 body.show h1 {
-  color: #9dd1f1;
-  -webkit-text-stroke: 1px #fff;
+  color: #083d77;
+  -webkit-text-stroke: 1px #000;
 }
 body.show p {
   font-size: 0.7em !important;
-  color: #9dd1f1 !important;
+  color: #083d77 !important;
 }
 body.show .img-fluid {
   margin: auto;
@@ -292,7 +288,6 @@ body.new {
 body.new label, body.edit label {
   font-size: 1em !important;
   color: #9dd1f1 !important;
-  text-shadow: 0 0 0.3rem #000;
 }
 
 /* forms on both new and edit */
@@ -324,7 +319,7 @@ body.error404 {
 }
 body.error404 h1 {
   color: #9dd1f1;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #000;
   font-size: 2.5em !important;
   margin-top: -0.9em;
 }
