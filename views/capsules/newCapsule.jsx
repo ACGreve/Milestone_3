@@ -51,22 +51,21 @@ function NewForm() {
               <div className="image-list">
         {images.map((image, index) => (
           <div key={index} className="image-item">
-            <img
-              src={image}
-              alt={`Image ${index + 1}`}
-              className={selectedImage === image ? 'selected' : ''}
-              onClick={() => handleImageSelection(image)}
-            />
-            <label>
-              <input
-                type="radio"
-                name="defaultImage"
-                value={image}
-                checked={selectedImage === image}
-                onChange={() => handleImageSelection(image)}
-              />
-              Select
-            </label>
+            <label htmlFor={`image${index}`}>
+                    <input
+                      type="radio"
+                      name="defaultImage"
+                      value={image}
+                      id={`image${index}`}
+                      checked={selectedImage === image}
+                      onChange={() => handleImageSelection(image)}
+                    />
+                    <img
+                      src={image}
+                      alt={`Image ${index + 1}`}
+                      className="thumbnail"
+                    />
+                  </label>
           </div>
         ))}
       </div>
