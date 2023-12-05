@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import LoginForm from "./capsules/loginForm";
 
 function Navbar() {
     const [loggedIn, setLoggedIn] = useState(false);
