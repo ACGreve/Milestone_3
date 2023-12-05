@@ -54,7 +54,7 @@ function NewForm() {
             <label htmlFor={`image${index}`}>
                     <input
                       type="radio"
-                      name="defaultImage"
+                      name="capsuleImage"
                       value={image}
                       id={`image${index}`}
                       checked={selectedImage === image}
