@@ -12,15 +12,16 @@ body {
   text-align: center;
   font-weight: bold;
   color: #9dd1f1;
-  text-shadow: 0 0 0.2rem #fff;
   background-color: #000;
 }
 body h1 {
+  font-size: 6em !important;
   text-align: center;
   color: #9dd1f1;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #000;
 }
 body h2 {
+  font-size: 3.5em !important;
   color: #9dd1f1 !important;
 }
 body h3,
@@ -35,7 +36,6 @@ body p {
   letter-spacing: 0.03em;
   font-size: 0.7em !important;
   line-height: 1em;
-  text-shadow: 0 0 0.3rem #000;
 }
 body img {
   margin: auto;
@@ -45,7 +45,7 @@ body img {
 
 /* home view */
 body.home {
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_1280.jpg);
+  background-image: url(/images/pocket-watch-3156771_1280.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -61,19 +61,18 @@ body.home {
   background-color: #000;
 }
 body.home h1 {
-  color: 83d77;
-  -webkit-text-stroke: 1px #fff;
+  color: #083d77;
+  -webkit-text-stroke: 1px #9dd1f1;
   margin-top: 0.5em;
 }
 body.home h2 {
-  color: 83d77 !important;
-  text-shadow: 0 0 0.3rem #000;
-  -webkit-text-stroke: 1px #fff;
+  color: #083d77 !important;
+  -webkit-text-stroke: 1px #9dd1f1;
 }
 
 /* capsules view */
 body.capsules {
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_1280.jpg);
+  background-image: url(/images/pocket-watch-3156771_1280.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -81,18 +80,15 @@ body.capsules {
 }
 body.capsules h1 {
   color: #9dd1f1;
-  text-shadow: 0 0 0.3rem #000;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #000;
 }
 body.capsules h2 {
   font-size: 1.1em;
   color: #9dd1f1 !important;
-  text-shadow: 0 0 0.3rem #000;
 }
 body.capsules p {
   font-size: 0.8em !important;
   color: #9dd1f1 !important;
-  text-shadow: 0 0 0.3rem #000;
 }
 body.capsules a img {
   padding-bottom: 7px;
@@ -106,6 +102,12 @@ body.capsules .col-sm-6 {
   margin-top: 1em;
   margin-bottom: 1em;
   text-align: center !important;
+}
+@media (max-width: 567px) {
+  body.capsules .col-sm-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 body.capsules .col-sm-6 img,
 body.capsules .col-md-6 img,
@@ -126,7 +128,7 @@ body.capsules .row {
 
 /* show view */
 body.show {
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_1280.jpg);
+  background-image: url(/images/wallpaper-7042708_1280.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -134,13 +136,12 @@ body.show {
   /* different viewport size adjustments */
 }
 body.show h1 {
-  color: #9dd1f1;
-  -webkit-text-stroke: 1px #fff;
+  color: #083d77;
+  -webkit-text-stroke: 1px #9dd1f1;
 }
 body.show p {
   font-size: 0.7em !important;
-  color: #9dd1f1 !important;
-  text-shadow: 0 0 0.3rem #000;
+  color: #083d77 !important;
 }
 body.show .img-fluid {
   margin: auto;
@@ -148,7 +149,8 @@ body.show .img-fluid {
 }
 body.show .col-md-4 img {
   height: 70vh !important;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body.show .col-md-8 {
   margin: 0 auto;
@@ -208,7 +210,8 @@ body.show .row {
   body.show img {
     height: 70vh !important;
     width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body.show .col-md-4,
   body.show .col-md-8 {
@@ -223,7 +226,8 @@ body.show .row {
 @media (max-width: 992px) {
   body.show .col-md-4 img {
     height: 60vh !important;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (max-width: 767px) {
@@ -238,7 +242,8 @@ body.show .row {
   }
   body.show .col-md-4 img {
     height: 50vh !important;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body.show .show-row {
     text-align: center;
@@ -265,7 +270,7 @@ body.show .row {
 
 /* new and edit views */
 body.edit {
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_1280.jpg);
+  background-image: url(/images/wallpaper-7042708_1280.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -273,7 +278,7 @@ body.edit {
   overflow: hidden;
 }
 body.new {
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_1280.jpg);
+  background-image: url(/images/wallpaper-7042708_1280.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -283,7 +288,6 @@ body.new {
 body.new label, body.edit label {
   font-size: 1em !important;
   color: #9dd1f1 !important;
-  text-shadow: 0 0 0.3rem #000;
 }
 
 /* forms on both new and edit */
@@ -306,7 +310,7 @@ form .form-control:focus {
 
 /* error404 view */
 body.error404 {
-  background-image: url(https://cdn.pixabay.com/photo/2020/05/29/17/37/indoor-5235953_1280.jpg);
+  background-image: url(/images/pocket-watch-3156771_1280.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -315,7 +319,7 @@ body.error404 {
 }
 body.error404 h1 {
   color: #9dd1f1;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #000;
   font-size: 2.5em !important;
   margin-top: -0.9em;
 }
@@ -335,12 +339,17 @@ body.error404 h1 {
   left: 0;
   width: 100%;
   z-index: 1;
-  height: 4em !important;
+  height: 3em !important;
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: left;
+  background: #083d77;
 }
-
+@media (max-width: 768px) {
+  .navbar {
+    font-size: 0.9em;
+  }
+}
 .navbar .navbar-nav {
   margin-left: 1.2em;
   margin-right: auto;
@@ -465,9 +474,9 @@ a:active {
   align-items: center;
   padding-top: 22px;
   width: 100%;
-  height: 5em;
+  height: 4em;
   line-height: 1em !important;
-  background: linear-gradient(to top, rgb(27, 27, 23), rgb(27, 27, 23) 90%, rgba(27, 27, 23, 0));
+  background: #083d77;
   color: #9dd1f1 !important;
   font-family: "Lato", sans-serif;
 }
@@ -535,4 +544,3 @@ h3{
   flex: 0 0 calc(32%); 
   position: relative;
 }
-

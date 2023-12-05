@@ -6,7 +6,7 @@ function Default(props) {
     <html>
       <head>
         <title>{props.title}</title>
-        <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <link rel="icon" type="image/png" href="/images/apple-touch-icon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
           rel="stylesheet"
@@ -61,7 +61,7 @@ function Default(props) {
                 GitHub
               </a>
               <a
-                href="https://mike-weisphal-portfolio.onrender.com/"
+                href="#"
                 target="_blank"
                 style={{ marginLeft: "20px" }}
               >
