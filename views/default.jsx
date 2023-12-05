@@ -5,7 +5,7 @@ function Default(props) {
     <html>
       <head>
         <title>{props.title}</title>
-        <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <link rel="icon" type="image/png" href="/images/apple-touch-icon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
           rel="stylesheet"
