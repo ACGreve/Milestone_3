@@ -70,10 +70,6 @@ function NewForm() {
         ))}
       </div>
             </div>
-            {/* <div className="form-group">
-              <label htmlFor="date">Encapsulation Date</label>
-              <input className="form-control" id="date" name="date" />
-            </div> */}
             <div className="form-group">
               <label htmlFor="note">Note to Future Self</label>
               <textarea
@@ -90,21 +86,11 @@ function NewForm() {
               <p>leave blank if no image is found</p>
             </div>
             <div className="radio-buttons">
-              {/* <label className="radio-label">
-                <input
-                  type="radio"
-                  name="status"
-                  // onClick={handleDraft}
-                  checked={status === "draft"} // Ensures button is checked when status is "draft"
-                />
-                <span className="btn btn-primary">Save as Draft</span>
-              </label> */}
               <label className="radio-label">
                 <input
                   type="radio"
                   name="status"
                   onClick={()=>handleLock()}
-                  // checked={status === "locked"} // Ensures button is checked when status is "locked"
                 />
                 <span className="btn btn-primary">Lock Capsule</span><br/>
                 <p>Check box to lock</p>
