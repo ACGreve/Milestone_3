@@ -558,3 +558,11 @@ a {
     }
   }
 }
+
+.thumbnail {
+  height: auto;
+  cursor: pointer;
+  width: 150px;  /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  object-fit: cover;
+}
