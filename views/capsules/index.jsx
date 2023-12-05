@@ -13,9 +13,9 @@ function index(data) {
         <a href={`/capsules/${capsule.id}`}>
           <img src={capsule.capsuleImage} alt='Image not available' />
         </a>
-        <h2>
+        <h4>
           <a href={`/capsules/${capsule.id}`}>{capsule.name}</a>
-        </h2>
+        </h4>
       </div>
     )
   })

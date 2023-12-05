@@ -12,20 +12,23 @@ capsules.get('/data/seed', async (req, res)=>{
 
 //Index Route for all the capsules
 capsules.get('/', async(req, res)=>{
-  const capsules = await Capsule.find()
-  res.render("capsules/index", { capsules })
+  try{
+    const capsules = await Capsule.find()
+    res.render("capsules/index", { capsules })
+  }catch(error){
+    res.render("Error404")
+  }
 })
 
 // Create new capsule with a specific status
 capsules.post("/", async (req, res) => {
     try {
-        const { name, capsuleImage, date, note, image, status, subDate } = req.body; // Extract data including status
+        const { name, capsuleImage, note, image, status, subDate } = req.body; // Extract data including status
 
         // Create a new capsule with the provided data including the status
         const createCapsule = await Capsule.create({
             name,
             capsuleImage,
-            date,
             note,
             image,
             status,
@@ -44,7 +47,26 @@ capsules.post("/", async (req, res) => {
 
 //get new page
 capsules.get("/new", (req, res) => {
-  res.render("capsules/newCapsule")
+  try{
+    res.render("capsules/newCapsule")
+  }catch(error){
+    res.render("Error404")
+  }
+})
+
+//get edit page
+capsules.get("/:id/edit", async (req, res) => {
+  try {
+    const { id } = req.params
+    const capsule = await Capsule.findById(id)
+    if (!capsule) {
+      res.render("error404")
+    }
+    res.render("capsules/editCapsule", { capsule })
+  } catch (err) {
+    console.log(err)
+    res.render("error404")
+  }
 })
 
 //get edit page

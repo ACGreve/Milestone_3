@@ -28,16 +28,6 @@ function edit_form(data) {
               <p>leave blank if no image is found</p>
             </div>
             <div className="form-group">
-              <label htmlFor="date">Encapsulation Date </label>
-              <input
-                className="form-control"
-                id="date"
-                type="text"
-                name="date"
-                defaultValue={data.capsule.date}
-              />
-            </div>
-            <div className="form-group">
               <label htmlFor="note">Note to Future Self</label>
               <textarea
                 className="form-control tall"
@@ -56,6 +46,17 @@ function edit_form(data) {
                 name="image"
                 defaultValue={data.capsule.image}
               />
+            </div>
+            <div className="radio-buttons">
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="status"
+                  // onClick={()=>handleLock()}
+                />
+                <span className="btn btn-primary">Lock Capsule</span><br/>
+                <p>Check box to lock</p>
+              </label>
             </div>
             <input
               className="btn btn-primary"

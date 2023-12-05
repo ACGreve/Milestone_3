@@ -5,35 +5,50 @@ const { signup, login } = require("../controllers/authorize");
 const { checkUser } = require("../middlewares/authorize");
 const bcrypt = require("bcrypt")
 
+
+
 users.get("/data/seed", async (req, res) => {
-    await User.insertMany(userSeedData)
-    res.redirect('/')
+    try{
+        await User.insertMany(userSeedData)
+        res.redirect('/')
+    }catch(error){
+        res.render("Error404")
+    }
 })
 
 //Home Route for login
 users.get('/login', (req, res) => {
-    // checkUser()
-    res.render("capsules/loginForm")
+    try{
+        res.render("capsules/loginForm")
+    }catch(error){
+        res.render("Error404")
+    }
 })
 
 users.post('/login', async (req, res) =>{
-    const { username, password } = req.body
-    const user = await User.findOne({ username })
-
-    if(!user){
-        console.log('user not found')
-    }
-    if(await bcrypt.compare(password, user.password)){
-        console.log('success')
-        res.redirect('/capsules')
-    }else{
-        console.log('invalid password')
+    try{
+        const { username, password } = req.body
+        const user = await User.findOne({ username })
+        if(!user){
+            console.log('user not found')
+        }
+        if(await bcrypt.compare(password, user.password)){
+            console.log('success')
+            res.redirect('/capsules')
+        }else{
+            console.log('invalid password')
+    }}catch{
+        res.render("Error404")
     }
 })
 
 //Sign Up Form
 users.get('/signup', (req, res) => {
-    res.render("capsules/signupForm")
+    try{
+        res.render("capsules/signupForm")
+    }catch(error){
+        res.render("Error404")
+    }
 })
 
 users.post('/', async(req,res)=>{
@@ -46,6 +61,7 @@ users.post('/', async(req,res)=>{
 
     }catch(error){
       console.log(error)
+      res.render("Error404")
     }
 })
 

@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react'
 
 
 function show(data) {
-  
-
   return (
     <Default title={data.capsule.name}>
       <body className="show">
@@ -22,7 +20,7 @@ function show(data) {
             <div className="col-md-8">
               <h1>{data.capsule.name}</h1>
               <br />
-              <p>Date: {data.capsule.date}</p>
+              <p>Date Locked: {data.capsule.subDate.toLocaleString()}</p>
               <p>Note to Future Self: </p>
               <h3 className="white"> {data.capsule.note}</h3>
               <br />
@@ -51,7 +49,7 @@ function show(data) {
                       d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
                     />
                   </svg>{" "}
-                    Edit
+                    EDIT
                   </a>
                   <form
                     method="POST"
