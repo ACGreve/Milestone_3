@@ -12,8 +12,12 @@ capsules.get('/data/seed', async (req, res)=>{
 
 //Index Route for all the capsules
 capsules.get('/', async(req, res)=>{
-  const capsules = await Capsule.find()
-  res.render("capsules/index", { capsules })
+  try{
+    const capsules = await Capsule.find()
+    res.render("capsules/index", { capsules })
+  }catch(error){
+    res.render("Error404")
+  }
 })
 
 // Create new capsule with a specific status
@@ -43,7 +47,11 @@ capsules.post("/", async (req, res) => {
 
 //get new page
 capsules.get("/new", (req, res) => {
-  res.render("capsules/newCapsule")
+  try{
+    res.render("capsules/newCapsule")
+  }catch(error){
+    res.render("Error404")
+  }
 })
 
 //get edit page
