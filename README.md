@@ -1,4 +1,4 @@
-![Alt text](public/timecapsulebanner.gif)
+![Alt text](public/images/timecapsulebanner.gif)
 
 ###   Milestone Project Three
 
